@@ -21,7 +21,7 @@ tagline: Minimalistic Jekyll theme that automatically supports dark and light mo
 description: Minimalistic Jekyll theme that automatically supports dark and light modes for blogs
 
 # The full URL to your site. Note: site.github.url will be used by default.
-url:
+url: "https://kenkeyless.github.io/"
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -30,7 +30,7 @@ url:
 baseurl: ""
 
 # global author information
-author: andrew-park
+author: 
 
 # URL to a site-wide logo (e.g., /assets/your-company-logo.png)
 logo: /assets/images/light_bauhaus_logo.png
@@ -42,13 +42,10 @@ permalink: /:year/:month/:day/:title/
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  email: mkie0125@gmail.com
-  facebook:
-  github: andrewhwanpark/brutalist-blog
-  instagram: andrewhwanpark
+  email: 
+  github: https://github.com/KenKeyless
   linkedin: andrewhwanpark
-  rss: # just type anything here for a working RSS icon
-  twitter: andrewhwanpark
+
 
 plugins:
   - jekyll-seo-tag
