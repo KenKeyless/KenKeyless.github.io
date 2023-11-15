@@ -35,29 +35,29 @@ header {
 }
 
 /* Navigation Bar styles */
-.navbar-nav.me-auto {
+.navbar{
   text-align: center;
   background-color:wheat;
   color: #fff;
   padding: 10px; /* Add padding to the navbar */
 }
 
-nav ul {
+.navbar ul {
   list-style-type: none;
 }
 
-nav ul li {
+.navbar ul li {
   display: inline;
   margin-right: 20px;
 }
 
-nav a {
+.navbar a {
   text-decoration: none;
   margin: 0 10px; /* Adjust the margin as needed */
   color: green;
 }
 
-nav h3 {
+.navbar h3 {
   color: white; /* Color for h3 inside the navbar */
 }
 
