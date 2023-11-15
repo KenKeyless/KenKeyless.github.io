@@ -4,12 +4,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .header-image {
   width: 666px; /* Adjust the width as needed */
   height: 150px; /* Adjust the height as needed */
   /* Additional styles if desired */
 }
-
 
 /* Body styles */
 body {
@@ -24,7 +24,7 @@ body {
 }
 
 /* Change the title color */
-h3{
+h3 {
   color: #0000aa; /* Set title color */
 }
 
@@ -35,30 +35,32 @@ header {
 }
 
 /* Navigation Bar styles */
-nav {
+.navbar {
   text-align: center;
   background-color: #000;
   color: #fff;
+  padding: 10px; /* Add padding to the navbar */
 }
 
-nav ul {
+.navbar ul {
   list-style-type: none;
 }
 
-nav ul li {
+.navbar ul li {
   display: inline;
   margin-right: 20px;
 }
 
-nav a {
+.navbar a {
   text-decoration: none;
   margin: 0 10px; /* Adjust the margin as needed */
   color: #0000aa;
 }
 
-nav h3 {
-  color: black;
+.navbar h3 {
+  color: black; /* Color for h3 inside the navbar */
 }
+
 
 /* Add this CSS rule to make the text smaller */
 .small-text p {
@@ -108,6 +110,7 @@ nav h3 {
 #portfolio p {
   color: #0000FF; 
 }
+
 /* Right Navigation Bar / Recent Projects styles */
 .right-column {
   width: 20%; /* Adjust the width as needed */
@@ -138,11 +141,7 @@ nav h3 {
   /* Additional styles if desired */
 }
 
-
 /* Footer styles */
 .footer {
   margin-top: 40px;
 }
-
-
-
