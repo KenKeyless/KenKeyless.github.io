@@ -35,30 +35,31 @@ header {
 }
 
 /* Navigation Bar styles */
-.navbar {
+nav {
   text-align: center;
+  background-color:wheat;
+  color: #fff;
   padding: 10px; /* Add padding to the navbar */
 }
 
-.navbar ul {
+nav ul {
   list-style-type: none;
 }
 
-.navbar ul li {
+nav ul li {
   display: inline;
   margin-right: 20px;
 }
 
-.navbar a {
+nav a {
   text-decoration: none;
   margin: 0 10px; /* Adjust the margin as needed */
-  color: black;
+  color: green;
 }
 
-.navbar h3 {
-  color: blueviolet; /* Color for h3 inside the navbar */
+nav h3 {
+  color: white; /* Color for h3 inside the navbar */
 }
-
 
 /* Add this CSS rule to make the text smaller */
 .small-text p {
