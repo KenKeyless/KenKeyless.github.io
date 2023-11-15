@@ -17,10 +17,10 @@ Description of Project 2.
 
 ### Recent Projects
 
-- [Project 3](#project3)
-  - Project Description
+[Project 3](#project3)
+Project Description
 
-- [Project 4](#project4)
-  - Project Description
+[Project 4](#project4)
+Project Description
 
 ---
