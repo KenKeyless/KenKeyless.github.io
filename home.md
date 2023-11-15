@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: page
 title: Home
+permalink: /home/
 ---
 
 ![3000](https://user-images.githubusercontent.com/66635295/166967115-655ca6c6-6610-4532-9a29-84f95b6dbce3.png)
