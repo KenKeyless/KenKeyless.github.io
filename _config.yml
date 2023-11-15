@@ -46,7 +46,6 @@ footer-links:
   github: KenKeyless
   linkedin: isaack0
 
-
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
