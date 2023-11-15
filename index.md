@@ -14,7 +14,7 @@ Description of Project 1.
 ### Project 2
 Description of Project 2.
 
-[Project 3](#project3)
+### [Project 3](#project3)
 Project Description
 
 [Project 4](#project4)
