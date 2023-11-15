@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /home/
 ---
 ## Posts
 
@@ -13,10 +14,6 @@ Description of Project 1.
 ### Project 2
 Description of Project 2.
 
----
-
-### Recent Projects
-
 [Project 3](#project3)
 Project Description
 
@@ -24,3 +21,5 @@ Project Description
 Project Description
 
 ---
+
+
