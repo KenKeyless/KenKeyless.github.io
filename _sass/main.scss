@@ -37,8 +37,6 @@ header {
 /* Navigation Bar styles */
 .navbar {
   text-align: center;
-  background-color: #000;
-  color: #fff;
   padding: 10px; /* Add padding to the navbar */
 }
 
@@ -54,11 +52,11 @@ header {
 .navbar a {
   text-decoration: none;
   margin: 0 10px; /* Adjust the margin as needed */
-  color: #0000aa;
+  color: black;
 }
 
 .navbar h3 {
-  color: black; /* Color for h3 inside the navbar */
+  color: blueviolet; /* Color for h3 inside the navbar */
 }
 
 
