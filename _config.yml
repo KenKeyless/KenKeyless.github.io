@@ -44,7 +44,7 @@ permalink: /:year/:month/:day/:title/
 footer-links:
   email: 
   github: KenKeyless
-  linkedin: isaack0
+  linkedin:
 
 plugins:
   - jekyll-seo-tag
