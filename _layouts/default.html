@@ -11,20 +11,17 @@
       rel="stylesheet"
       href="{{ '/assets/css/styles.css' | relative_url }}"
     />
-    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" />
-    <!-- Meta Theme Color is also supported on Safari and Chrome -->
-    
+    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" />  
   </head>
+  
   <body class="d-flex flex-column h-100">
     <div class="container">
+      
       {% include navigation.html %}
+      
       <div class="body">{{ content }}</div>
    
-    
     {% include footer.html %}
-  <footer class="footer mt-auto py-3">
-    <div class="container footer-container">{% include svg_icons.html %}</div>
-  </footer> 
 </div> 
 </body>
 </html>
