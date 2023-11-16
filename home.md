@@ -4,7 +4,10 @@ layout: default
 ---
 ## Posts
 
-[![Project 1](https://blankrecordings.files.wordpress.com/2014/03/black-and-white-spiral-abstract-hd-wallpaper-1920x1080-8858.jpg)](project1.html)
+<a href="project1.html">
+  <img src="https://blankrecordings.files.wordpress.com/2014/03/black-and-white-spiral-abstract-hd-wallpaper-1920x1080-8858.jpg" alt="Project 1" class="project-image">
+</a>
+
 
 ### Project 1
 Description of Project 1.
