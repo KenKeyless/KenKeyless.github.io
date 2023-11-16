@@ -66,7 +66,7 @@ header {
 }
 
 /* Main Content Container styles */
-body .container .content-container {
+body .content-container {
   display: flex; /* Use flexbox for layout */
   justify-content: space-between; /* Distribute space between columns */
 }
@@ -81,7 +81,7 @@ body .container {
 }
 
 /* Left Empty Column styles */
-body .container.left-column-empty {
+body .left-column-empty {
   flex: 1; /* Distribute available space evenly */
   background-color: green; /* Set the background color */
   padding: 1px; /* Add padding to create empty space */
@@ -110,7 +110,7 @@ body .container .center-column {
 }
 
 /* Right Navigation Bar / Recent Projects styles */
-body .container .right-column {
+body .right-column {
   width: 20%; /* Adjust the width as needed */
   background-color: blue;
   color: black;
@@ -122,7 +122,7 @@ body .container .right-column {
 }
 
 /* Right Empty Column styles */
-body .container .right-column-empty {
+body .right-column-empty {
   flex: 1; /* Distribute available space evenly */
   background-color: orange; /* Set the background color */
   padding: 1px; /* Add padding to create empty space */
