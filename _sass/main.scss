@@ -75,7 +75,7 @@ header {
 .container {
   display: flex;
   flex-direction: column;
-  background-color: #cccccc; /* Set the background color */
+  background-color:red; /* Set the background color */
   color: black; /* Set the text color */
   padding: 20px;
 }
@@ -83,12 +83,12 @@ header {
 /* Left Empty Column styles */
 .left-column-empty {
   flex: 1; /* Distribute available space evenly */
-  background-color: #cccccc; /* Set the background color */
+  background-color: green; /* Set the background color */
   padding: 1px; /* Add padding to create empty space */
 }
 
 /* Center Content Column styles */
-.center-column {
+body .container .center-column {
   width: 60%; /* Adjust the width as needed */
   text-align: left;
   padding: 20px;
@@ -112,7 +112,7 @@ header {
 /* Right Navigation Bar / Recent Projects styles */
 .right-column {
   width: 20%; /* Adjust the width as needed */
-  background-color: #cccccc;
+  background-color: blue;
   color: black;
   padding: 20px;
 }
@@ -124,7 +124,7 @@ header {
 /* Right Empty Column styles */
 .right-column-empty {
   flex: 1; /* Distribute available space evenly */
-  background-color: #cccccc; /* Set the background color */
+  background-color: pink; /* Set the background color */
   padding: 1px; /* Add padding to create empty space */
 }
 
