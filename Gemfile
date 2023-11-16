@@ -8,5 +8,5 @@ group :jekyll_plugins do
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
   gem 'jekyll-feed'
-  gem 'faraday-retry'
+  gem 'faraday-retry', '~> 2.2'
 end
