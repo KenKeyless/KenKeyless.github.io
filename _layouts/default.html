@@ -18,14 +18,16 @@
       
       {% include navigation.html %}
 
-            <!-- Left Empty Column -->
+      <!-- Center Content Column -->
+      <div class="content-container">{{ content }}
+      </div>     
+      
+      <!-- Left Empty Column -->
             <div class="left-column-empty">
                 <!-- Leave this column empty -->
             </div>
-
-            <!-- Center Content Column -->
-            <div class="content-container">{{ content }}
-                    </div>
+            <div class="center-column">{{ content }}
+            
             
 
             <!-- Right Navigation Bar / Recent Projects -->
@@ -42,10 +44,9 @@
             <div class="right-column-empty">
                 <!-- Leave this column empty -->
             </div>
-    {% include footer.html %}
+    
+            {% include footer.html %}
 
           </div>
-  </div> 
-</div>
 </body>
 </html>
