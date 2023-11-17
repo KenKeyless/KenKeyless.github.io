@@ -62,6 +62,7 @@ header {
 /* Main Content Container styles */
 .content-container {
   display: flex; /* Use flexbox for layout */
+  background-color: #cccccc;
   justify-content: space-between; /* Distribute space between columns */
 }
 
