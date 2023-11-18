@@ -157,7 +157,7 @@ body .container .project-image {
   }
 .content-container{
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: space-between;
 }
   /* Additional responsive styles as needed */
@@ -177,7 +177,7 @@ body .container .project-image {
   }
   .content-container{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: space-between;
   }
 
