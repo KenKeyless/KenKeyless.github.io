@@ -106,6 +106,7 @@ header {
 
 /* Right Navigation Bar / Recent Projects styles */
 .right-column {
+  position: relative;
   width: 20%; /* Adjust the width as needed */
   background-color: #cccccc;
   color: black;
@@ -152,6 +153,7 @@ body .container .project-image {
 
   .container {
     /* Adjust container styles for tablets */
+    display: block;
     padding: 10px;
   }
 
@@ -169,6 +171,7 @@ body .container .project-image {
   .container {
     /* Adjust container styles for mobile devices */
     padding: 5px;
+    display:block
   }
 
   /* Additional responsive styles as needed */
