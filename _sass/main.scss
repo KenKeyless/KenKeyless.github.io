@@ -140,3 +140,36 @@ body .container .project-image {
   background-color: #cccccc;
 
 }
+
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+  body {
+    /* Adjust the body styles for tablets */
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  .container {
+    /* Adjust container styles for tablets */
+    padding: 10px;
+  }
+
+  /* Additional responsive styles as needed */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  body {
+    /* Adjust the body styles for mobile devices */
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .container {
+    /* Adjust container styles for mobile devices */
+    padding: 5px;
+  }
+
+  /* Additional responsive styles as needed */
+}
