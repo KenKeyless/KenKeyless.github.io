@@ -153,10 +153,11 @@ body .container .project-image {
 
   .container {
     /* Adjust container styles for tablets */
-    display: block;
     padding: 10px;
   }
-
+.content-container{
+  display: block;
+}
   /* Additional responsive styles as needed */
 }
 
@@ -171,7 +172,9 @@ body .container .project-image {
   .container {
     /* Adjust container styles for mobile devices */
     padding: 5px;
-    display:block
+  }
+  .content-container{
+    display: block;
   }
 
   /* Additional responsive styles as needed */
