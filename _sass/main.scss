@@ -130,8 +130,8 @@ header {
 }
 
 body .container .project-image {
-  width: 300px; /* Set the width to your desired standard size */
-  height: 100px; /* Set the height to your desired standard size */
+  width: 200px; /* Set the width to your desired standard size */
+  height: 80px; /* Set the height to your desired standard size */
   /* Additional styles if desired */
 }
 
@@ -160,12 +160,7 @@ body .container .project-image {
   flex-direction: column;
   justify-content: space-between;
 }
-  /* Additional responsive styles as needed */
-  .container .project-image{
-    width: 200px;
-    height: 80px;
-  }
-}
+
 
 /* Media query for mobile devices */
 @media (max-width: 480px) {
@@ -185,10 +180,6 @@ body .container .project-image {
     justify-content: space-between;
   }
 
-  .container .project-image{
-    width: 200px;
-    height: 80px;
-  }
-
   /* Additional responsive styles as needed */
+}
 }
