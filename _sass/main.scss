@@ -161,6 +161,10 @@ body .container .project-image {
   justify-content: space-between;
 }
   /* Additional responsive styles as needed */
+  body .container .project-image{
+    width: 200px;
+    height: 80px;
+  }
 }
 
 /* Media query for mobile devices */
@@ -179,6 +183,11 @@ body .container .project-image {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  body .container .project-image{
+    width: 200px;
+    height: 80px;
   }
 
   /* Additional responsive styles as needed */
