@@ -14,7 +14,7 @@ title: HTB Web Proxies Skill Assessmnent
 3. **Intercept the Request:**
    - Click the enabled button and intercept the request using BurpSuite. The intercepted request should reflect "getflag=true".
 
-<img class="post-image-big" src="{{site.baseurl}}/assets/images/2023-12-1-Web-Proxies-Skill_Assessmnent_images/images/image1.png" alt="Image 1">
+<img class="post-image-small" src="{{site.baseurl}}/assets/images/2023-12-1-Web-Proxies-Skill_Assessmnent_images/images/image1.png" alt="Image 1">
 
 4. **Send to Repeater:**
    - Transfer this intercepted request to the Repeater tool in BurpSuite. Begin sending the request repeatedly.
