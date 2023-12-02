@@ -136,15 +136,13 @@ body .container .project-image {
 }
   
 body.container.post-image-big {
-  max-width: 100%;
-  height: auto;
-  /* Additional styles for big images if needed */
+  max-width: 200px;
+  height: 80px 
 }
 
 body .container .post-image-small {
-  max-width: 50%; /* Adjust the width as needed */
-  height: auto;
-  /* Additional styles for small images if needed */
+  max-width: 200px;
+  height: 80px
 }
 /* Footer styles */
  footer {
