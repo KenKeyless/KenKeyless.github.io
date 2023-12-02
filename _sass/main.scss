@@ -134,7 +134,19 @@ body .container .project-image {
   height: 80px; /* Set the height to your desired standard size */
   /* Additional styles if desired */
 }
+  
+body.container.post-image-big {
+  max-width: 100%;
+  height: auto;
+  /* Additional styles for big images if needed */
+}
 
+
+body .container .post-image-small {
+  max-width: 50%; /* Adjust the width as needed */
+  height: auto;
+  /* Additional styles for small images if needed */
+}
 /* Footer styles */
  footer {
   margin-top: 40px;
