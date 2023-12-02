@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: default
 title: HTB Web Proxies Skill Assessmnent
 ---
 1. **Setting Up BurpSuite:**
    - Open BurpSuite and configure your browser to proxy through it. Ensure the intercept is enabled to capture and manipulate web traffic.
-![image1]({{site.baseurl}}/assets/images/2023-12-1-Web-Proxies-Skill_Assessmnent_images/images/image1.png)
+<img class="project-image" src="{{site.baseurl}}/assets/images/2023-12-1-Web-Proxies-Skill_Assessmnent_images/images/image1.png" alt="Image 1">
 
 2. **Navigate to /lucky.php:**
    - Access the "/lucky.php" page and open the developer tools in your browser. Enable the button within the developer tools interface.
