@@ -1,53 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-us" class="h-100">
-  <head>
-    <title>
-      {% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{
-      site.description }}
-    </title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/styles.css' | relative_url }}"
-    />
-    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" />  
-  </head>
-  <header>
-    {% include navigation.html %}
-  </header>
-  <body>
-    <div class="container">
-
-      <div class="content-container">
-         
-      
-      <!-- Left Empty Column 
-            <div class="left-column-empty">
-                 Leave this column empty 
-            </div>-->
-            
-            <div class="center-column">{{ content }}
-            </div>
-            <!-- Right Navigation Bar / Recent Projects 
-            <nav class="right-column">
-                <h3>Recent Projects</h3>
-                <h4><a href="#project5">Project 5</a></h4>
-                <p>Project Description</p>
-                <br>
-                <h4><a href="#project6">Project 6</a></h4>
-                <p>Project Description</p>
-            </nav>
--->
-            <!-- Right Empty Column
-            <div class="right-column-empty">
-                 Leave this column empty 
-            </div>
-          -->
-          </div> 
-            <footer>
-            {% include footer.html %}
-      </footer>
-        </div> 
+<head>
+  <title>
+    {% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}
+  </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+  <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" />  
+</head>
+<body>
+  <div class="container">
+    <div class="content-container">
+      <div class="center-column">
+        {{ content }}
+      </div>
+    </div> 
+    <footer>
+      {% include footer.html %}
+    </footer>
+  </div> 
 </body>
 </html>
+
