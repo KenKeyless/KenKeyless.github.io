@@ -11,10 +11,7 @@ body {
   color: black;
   font-family: 'Consolas', monospace;
   text-align: center;
-  padding-top: 50px; /* Adjust the top padding */
-  padding-right: 200px; /* Adjust the right padding */
-  padding-bottom: 500px; /* Adjust the bottom padding */
-  padding-left: 200px; /* Adjust the left padding */
+  padding: 50px 200px 500px; /* Top Right Bottom Left */
 }
 
 /* Change the title color */
@@ -29,7 +26,7 @@ header {
 }
 
 /* Navigation Bar styles */
-.navbar{
+.navbar {
   text-align: center;
   color: #fff;
   padding: 10px; /* Add padding to the navbar */
@@ -47,16 +44,11 @@ header {
 .navbar a {
   text-decoration: none;
   margin: 0 10px; /* Adjust the margin as needed */
-  color:darkblue;
+  color: darkblue;
 }
 
 .navbar h3 {
   color: white; /* Color for h3 inside the navbar */
-}
-
-/* Add this CSS rule to make the text smaller */
-.small-text p {
-  font-size: 11px; /* Adjust the font size as needed */
 }
 
 /* Main Content Container styles */
@@ -76,69 +68,29 @@ header {
 
 /* Center Content Column styles */
 .center-column {
-  /* width: 60%; Adjust the width as needed */
-  margin: 0 auto;
+  margin: 0 auto; /* Center the column horizontally */
   text-align: center;
   padding: 20px;
   background-color: #cccccc;
 }
 
-/* Change the color of h2 within the portfolio section */
-#portfolio h2 {
-  color: #FF0000; 
-}
-
-/* Change the color of h3 within the portfolio section */
-#portfolio h3 {
-  color: #00FF00; 
-}
-
-/* Change the color of p within the portfolio section */
-#portfolio p {
-  color: #0000FF; 
-}
-
-/* Project styles */
-.project {
-  margin-bottom: 20px;
-}
-
-body .container .project-image {
-  width: 200px; /* Set the width to your desired standard size */
-  height: 80px; /* Set the height to your desired standard size */
-  /* Additional styles if desired */
-}
-  
-body .container .post-image-big {
-  max-width: 500px;
-  height: 400px 
-}
-
-body .container .post-image-small {
-  max-width: 300px;
-  height: 300px
-}
 /* Footer styles */
 footer {
   margin-top: 40px;
   background-color: #cccccc;
 }
 
-
 /* Media query for tablets */
 @media (max-width: 768px) {
   body {
-    /* Adjust the body styles for tablets */
-    padding-right: 100px;
-    padding-left: 100px;
+    padding: 50px 100px; /* Top Right Bottom Left */
   }
 
   .container {
-    /* Adjust container styles for tablets */
     padding: 10px;
   }
-  .content-container{
-    display: flex;
+
+  .content-container {
     flex-direction: column;
     justify-content: space-between;
   }
@@ -147,17 +99,14 @@ footer {
 /* Media query for mobile devices */
 @media (max-width: 480px) {
   body {
-    /* Adjust the body styles for mobile devices */
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 50px 20px; /* Top Right Bottom Left */
   }
 
   .container {
-    /* Adjust container styles for mobile devices */
     padding: 5px;
   }
-  .content-container{
-    display: flex;
+
+  .content-container {
     flex-direction: column;
     justify-content: space-between;
   }
