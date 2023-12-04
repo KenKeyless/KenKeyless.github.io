@@ -32,6 +32,14 @@ header {
   color: #fff;
   padding: 10px; /* Add padding to the navbar */
 }
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
 
 /* Main Content Container styles */
 .content-container {
@@ -95,25 +103,6 @@ footer {
 
   /* Additional responsive styles as needed */
 }
-
-
-/* Navigation Bar styles */
-.navbar{
-  text-align: center;
-  color: #fff;
-  padding: 10px; /* Add padding to the navbar */
-}
-
-.navbar ul {
-  list-style-type: none;
-}
-
-.navbar ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-
 
 body .container .project-image {
   width: 200px; /* Set the width to your desired standard size */
