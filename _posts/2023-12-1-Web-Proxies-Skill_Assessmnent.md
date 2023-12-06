@@ -1,73 +1,69 @@
----
-layout: default
-title: HTB Web Proxies Skill Assessment
----
+None of the required exercises needed zap, so I'll stick to Burp.
+
+The /lucky.php page has a button that appears to be disabled. Try to enable the button, and then click it to get the flag.
 
 **Setting Up BurpSuite:**
-
-- Open BurpSuite and configure your browser to proxy through it. Ensure the intercept is enabled to capture and manipulate web traffic.
-
-<img class="post-image-small" src="{{site.baseurl}}/assets/images/2023-12-1-Web-Proxies-Skill_Assessmnent_images/images/image4.png" alt="Image 4">
+Open BurpSuite and configure your browser to proxy through it. Ensure the intercept is enabled to capture and manipulate web traffic.
 
 **Navigate to /lucky.php:**
-
-- Access the "/lucky.php" page and open the developer tools in your browser. Enable the button within the developer tools interface.
+Access the "/lucky.php" page and open the developer tools in your browser. Enable the button within the developer tools interface.
 
 **Intercept the Request:**
-
-- Click the enabled button and intercept the request using BurpSuite. The intercepted request should reflect "getflag=true".
-
-<img class="post-image-big" src="{{site.baseurl}}/assets/images/2023-12-1-Web-Proxies-Skill_Assessmnent_images/images/image1.png" alt="Image 1">
+Click the enabled button and intercept the request using BurpSuite. The intercepted request should reflect "getflag=true".
 
 **Send to Repeater:**
-
-- Transfer this intercepted request to the Repeater tool in BurpSuite. Begin sending the request repeatedly.
+Transfer this intercepted request to the Repeater tool in BurpSuite. Begin sending the request repeatedly.
 
 **Exploring Race Conditions:**
-
-- The server might exhibit a Race Condition or State Change behavior, where the flag only appears after sending the request multiple times. Observe any changes in the server's response or behavior of the button during this process.
+The server might exhibit a Race Condition or State Change behavior, where the flag only appears after sending the request multiple times. Observe any changes in the server's response or behavior of the button during this process.
 
 **Persistence Pays Off:**
-
-- Keep sending the request through the Repeater until the flag eventually appears. This persistence and experimentation are crucial in identifying vulnerabilities reliant on timing or state changes.
-
----
+Keep sending the request through the Repeater tool until the flag eventually appears. This persistence and experimentation are crucial in identifying vulnerabilities reliant on timing or state changes.
 
 The /admin.php page uses a cookie that has been encoded multiple times. Try to decode the cookie until you get a value with 31-characters. Submit the value as the answer.
 
 **Intercept the Request:**
-
-- Access the "/admin.php" page and intercept the login request to acquire the encoded cookie.
+Access the "/admin.php" page and intercept the login request to acquire the encoded cookie.
 
 **Decode the Cookie:**
+Upon inspecting the cookie, it seems to be initially encoded in hexadecimal format. However, decoding this reveals another 64-character string, indicating a closer alignment with Base64 encoding.
 
-- Upon inspecting the cookie, it seems to be initially encoded in hexadecimal format. However, decoding this reveals another 64-character string, indicating a closer alignment with Base64 encoding.
+Proceeding with both decoding methods—first hex decoding followed by Base64—unveils a string of 31 characters, meeting the criteria specified in the challenge.
 
-**Fuzzing the Last Character:**
+Once you decode the cookie, you will notice that it is only 31 characters long, which appears to be an md5 hash missing its last character. So, try to fuzz the last character of the decoded md5 cookie with all alpha-numeric characters, while encoding each request with the encoding methods you identified above. (You may use the "alphanum-case.txt" wordlist from Seclist for the payload)
 
-- Try all alpha-numeric characters to fuzz the last character of the decoded md5 cookie. Encode each request with the identified encoding methods. Utilize the "alphanum-case.txt" wordlist from Seclist for the payload.
+**Sending the Initial Request:**
+Using BurpSuite, forward the initial request to the Intruder, ensuring to isolate and parameterize only the cookie for modification.
 
----
+**Setting Up Payload Processing:**
+Navigate to the "Payloads" tab within the Intruder tool. Under "Payload Processing," add the following modifications:
+- **Prefix with 31-Character Value:** Add the 31-character value as a prefix.
+- **Base64 Encoding:** Enable Base64 encoding for the modified payload.
+- **ASCII Hex Encoding:** Apply ASCII Hex encoding
+
+**Including the Alphanumeric Wordlist:**
+In the "Payload Options," incorporate the "alphanum-case.txt" wordlist from Seclist and start the attack.
+
+**Observing Length Changes:**
+Monitor the attack progress within BurpSuite. Note any variations or patterns in the lengths of the responses.
+
+**Inspecting Response Headers:**
+Click on the modified requests generated by the attack within BurpSuite. Explore the response of these requests to identify the flag.
+
+**Mitigation Strategies:**
+- **Limited Cookie Lifespan:** Set appropriate expiration times for cookies, ensuring they expire after a reasonable duration to reduce the window of vulnerability.
+- **Session Management:** Employ secure session management practices. Regenerate session IDs upon login or critical actions to prevent session fixation attacks.
 
 You are using the 'auxiliary/scanner/http/coldfusion_locale_traversal' tool within Metasploit, but it is not working properly for you. You decide to capture the request sent by Metasploit so you can manually verify it and repeat it. Once you capture the request, what is the 'XXXXX' directory being called in '/XXXXX/administrator/..'?
 
 **Using Metasploit for Request Capture with BurpSuite:**
-
-- Open the Metasploit Framework console.
-- Search for the 'coldfusion_locale_traversal' module using the `search` command.
-- Set the required options: target IP (`RHOST`), target port (`RPORT`), and configure proxies to direct traffic through Burp Suite (`Proxies`).
-- Initiate the attack by executing the module with the `exploit` or `run` command.
-
-**Intercept Requests with Burp Suite:**
-
-- As the attack runs, the requests will be routed through your defined proxy settings (`HTTP:127.0.0.1:8080`). Burp Suite will intercept the requests, allowing inspection.
-
----
+- **Search for the Module:** Open the Metasploit Framework console. Search for the 'coldfusion_locale_traversal' module using the `search` command.
+- **Set Module Options:** Upon locating the module, set the required options:
+  - Set the target IP (`RHOST`).
+  - Define the target port (`RPORT`).
+  - Configure proxies to direct traffic through Burp Suite (`Proxies`).
+- **Run the Attack:** Initiate the attack by executing the module with the `exploit` or `run` command.
+- **Intercept Requests with Burp Suite:** As the attack runs, the requests will be routed through your defined proxy settings (`HTTP:127.0.0.1:8080`). Burp Suite will intercept the requests, allowing inspection.
 
 **Mitigation Strategies:**
-
-- **Limited Cookie Lifespan:**
-  - Set appropriate expiration times for cookies to reduce the window of vulnerability.
-
-- **Session Management:**
-  - Employ secure session management practices to prevent session fixation attacks.
+- **Patch and Update ColdFusion:** Address specific vulnerabilities like CVE-2010-2861 by promptly updating ColdFusion to the latest available version. Regular updates are crucial to mitigate known vulnerabilities.
