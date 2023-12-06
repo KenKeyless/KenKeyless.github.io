@@ -108,6 +108,8 @@ body .container .post-image-small {
 }
 
 /* Prevent text from breaking layout */
-body .container p {
+.container p,
+.container ul li,
+.container ol li {
   word-wrap: break-word; /* Break long words to avoid overflow */
 }
