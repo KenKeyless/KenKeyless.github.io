@@ -91,24 +91,6 @@ footer {
   }
 }
 
-/* Media query for mobile devices */
-@media (max-width: 480px) {
-  body {
-    padding: 50px 20px; /* Top Right Bottom Left */
-  }
-
-  .container {
-    padding: 5px;
-  }
-
-  .content-container {
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  /* Additional responsive styles as needed */
-}
-
 body .container .project-image {
   width: 200px; /* Set the width to your desired standard size */
   height: 80px; /* Set the height to your desired standard size */
