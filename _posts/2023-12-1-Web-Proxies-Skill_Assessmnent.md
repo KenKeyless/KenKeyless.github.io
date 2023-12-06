@@ -1,61 +1,70 @@
 ---
 layout: default
-title: HTB Web Proxies Skill Assessmnent
----
-1. **Setting Up BurpSuite:**
-   - Open BurpSuite and configure your browser to proxy through it. Ensure the intercept is enabled to capture and manipulate web traffic.
-
-<img class="post-image-small" src="{{site.baseurl}}/assets/images/2023-12-1-Web-Proxies-Skill_Assessmnent_images/images/image4.png" alt="Image 4">
-
-
-2. **Navigate to /lucky.php:**
-   - Access the "/lucky.php" page and open the developer tools in your browser. Enable the button within the developer tools interface.
-
-3. **Intercept the Request:**
-   - Click the enabled button and intercept the request using BurpSuite. The intercepted request should reflect "getflag=true".
-
-<img class="post-image-big" src="{{site.baseurl}}/assets/images/2023-12-1-Web-Proxies-Skill_Assessmnent_images/images/image1.png" alt="Image 1">
-
-4. **Send to Repeater:**
-   - Transfer this intercepted request to the Repeater tool in BurpSuite. Begin sending the request repeatedly.
-
-5. **Exploring Race Conditions:**
-   - The server might exhibit a Race Condition or State Change behavior, where the flag only appears after sending the request multiple times. Observe any changes in the server's response or behavior of the button during this process.
-
-6. **Persistence Pays Off:**
-   - Keep sending the request through the Repeater tool until the flag eventually appears. This persistence and experimentation are crucial in identifying vulnerabilities reliant on timing or state changes.
-
+title: HTB Web Proxies Skill Assessment
 ---
 
-The /admin.php page uses a cookie that has been encoded multiple times. Try to decode the cookie until you get a value with 31-characters. Submit the value as the answer.
+## Setting Up BurpSuite
 
-1. **Intercept the Request:**
-   - Access the "/admin.php" page and intercept the login request to acquire the encoded cookie.
+**Configuration for BurpSuite:**
+- Open BurpSuite and set up your browser to proxy through it. Enable intercept to capture and manipulate web traffic.
 
-2. **Decode the Cookie:**
-   - Upon inspecting the cookie, it seems to be initially encoded in hexadecimal format. However, decoding this reveals another 64-character string, indicating a closer alignment with Base64 encoding.
+![Image 4]( {{ site.baseurl }}/assets/images/2023-12-1-Web-Proxies-Skill_Assessment_images/images/image4.png)
 
-3. **Fuzzing the Last Character:**
-   - Try all alpha-numeric characters to fuzz the last character of the decoded md5 cookie. Encode each request with the identified encoding methods. Utilize the "alphanum-case.txt" wordlist from Seclist for the payload.
+## Navigating to /lucky.php
+
+**Developer Tools for Page Access:**
+- Access "/lucky.php" and activate the button in your browser's developer tools interface.
+
+## Intercepting the Request
+
+**Using BurpSuite for Request Intercept:**
+- Click the enabled button to intercept the request in BurpSuite. Ensure the intercepted request reflects "getflag=true".
+
+![Image 1]( {{ site.baseurl }}/assets/images/2023-12-1-Web-Proxies-Skill_Assessment_images/images/image1.png)
+
+## Utilizing Repeater
+
+**Sending Requests through Repeater:**
+- Send the intercepted request to the Repeater tool in BurpSuite. Begin sending it repeatedly.
+
+## Exploring Vulnerabilities
+
+**Understanding Race Conditions:**
+- Observe server response or button behavior; the flag may appear after sending requests multiple times, indicating a race condition or state change behavior.
+
+**Persistence for Success:**
+- Continue sending the request through Repeater until the flag appears. Persistence and experimentation help identify timing or state-based vulnerabilities.
 
 ---
 
-You are using the 'auxiliary/scanner/http/coldfusion_locale_traversal' tool within Metasploit, but it is not working properly for you. You decide to capture the request sent by Metasploit so you can manually verify it and repeat it. Once you capture the request, what is the 'XXXXX' directory being called in '/XXXXX/administrator/..'?
+### Decoding the Encoded Cookie
 
-1. **Using Metasploit for Request Capture with BurpSuite:**
-   - Open the Metasploit Framework console.
-   - Search for the 'coldfusion_locale_traversal' module using the `search` command.
-   - Set the required options: target IP (`RHOST`), target port (`RPORT`), and configure proxies to direct traffic through Burp Suite (`Proxies`).
-   - Initiate the attack by executing the module with the `exploit` or `run` command.
+The `/admin.php` page uses a multiple-encoded cookie. Decode the cookie until you obtain a value with 31 characters, then submit it as the answer.
 
-2. **Intercept Requests with Burp Suite:**
-   - As the attack runs, the requests will be routed through your defined proxy settings (`HTTP:127.0.0.1:8080`). Burp Suite will intercept the requests, allowing inspection.
+**Request Interception for Decoding:**
+- Access "/admin.php" and intercept the login request to retrieve the encoded cookie.
+
+**Decoding Process:**
+- Initially encoded in hexadecimal, the cookie reveals a 64-character Base64 encoded string upon decoding. Try fuzzing the last character of the decoded md5 cookie using alphanumeric characters.
 
 ---
 
-**Mitigation Strategies:**
-- **Limited Cookie Lifespan:**
-  - Set appropriate expiration times for cookies to reduce the window of vulnerability.
+### Capturing Metasploit Request
+
+While using 'auxiliary/scanner/http/coldfusion_locale_traversal' in Metasploit, capture the request to manually verify and repeat. Identify the 'XXXXX' directory called in '/XXXXX/administrator/..'.
+
+**Metasploit Setup for Request Capture:**
+- Configure Metasploit to use BurpSuite as a proxy to capture requests during the attack.
+
+**Intercepting Requests with Burp Suite:**
+- Burp Suite intercepts requests made by Metasploit, allowing inspection and verification.
+
+---
+
+### Mitigation Strategies
+
+- **Cookie Expiration:**
+  - Set appropriate expiration times for cookies to minimize vulnerability windows.
 
 - **Session Management:**
   - Employ secure session management practices to prevent session fixation attacks.
