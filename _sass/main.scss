@@ -21,7 +21,9 @@ h3 {
 
 /* Banner styles */
 header {
-  
+  width: 90%; /* Set a relative width for the header */
+  max-width: 1000px; /* Set a maximum width to prevent excessive expansion */
+  margin: 0 auto; /* Center the header horizontally */
   background-color: #cccccc;
   color: grey;
 }
@@ -47,22 +49,25 @@ header {
   justify-content: space-between; /* Distribute space between columns */
 }
 
-/* Container styles */
-.container {
-  display: flex;
-  flex-direction: column;
-  background-color: #cccccc; /* Set the background color */
-  color: black; /* Set the text color */
-  padding: 20px;
-}
-
-/* Center Content Column styles */
 .center-column {
+  width: 80%; /* Set a relative width for the center column */
+  max-width: 800px; /* Set a maximum width to prevent excessive expansion */
   margin: 0 auto; /* Center the column horizontally */
   text-align: center;
   padding: 20px;
   background-color: #cccccc;
 }
+
+/* Container styles */
+.container {
+  width: 90%; /* Set a relative width for the container */
+  max-width: 1000px; /* Set a maximum width to prevent excessive expansion */
+  margin: 0 auto; /* Center the container horizontally */
+  display: flex;
+  flex-direction: column;
+  background-color: #cccccc;
+  color: black;
+  padding: 20px;
 
 /* Footer styles */
 footer {
