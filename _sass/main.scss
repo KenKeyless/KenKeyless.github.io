@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  word-wrap: break-word;
 }
 
 /* Body styles */
@@ -85,12 +86,6 @@ body .container .post-image-small {
   height: auto;
 }
 
-/* Prevent text from breaking layout */
-.container p,
-.container ul li,
-.container ol li {
-  word-wrap: break-word; /* Break long words to avoid overflow */
-}
 
 @media (min-width: 768px) {
   body .container .project-image {
