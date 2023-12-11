@@ -5,7 +5,7 @@ None of the required exercises needed zap, so I'll stick to Burp.
 **Setting Up BurpSuite:**
 Open BurpSuite and configure your browser to proxy through it. Ensure the intercept is enabled to capture and manipulate web traffic.
 
-<img class="post-image-small" src="{{site.baseurl}}/assets/images/2023-12-1-Web-Proxies-Skill_Assessmnent_images/images/image4.png" alt="Image 4">
+<img class="post-image-small" src="{{site.baseurl}}\assets\images\2023-12-1-Web-Proxies-Skill_Assessmnent_images\images\image4.png" alt="Image 4">
 
 **Navigate to /lucky.php:**
 Access the "/lucky.php" page and open the developer tools in your browser. Enable the button within the developer tools interface.
@@ -13,10 +13,12 @@ Access the "/lucky.php" page and open the developer tools in your browser. Enabl
 
 **Intercept the Request:**
 Click the enabled button and intercept the request using BurpSuite. The intercepted request should reflect "getflag=true".
-<img class="post-image-big" src="{{site.baseurl}}/assets/images/2023-12-1-Web-Proxies-Skill_Assessmnent_images/images/image1.png" alt="Image 1">
+<img class="post-image-big" src="{{site.baseurl}}\assets\images\2023-12-1-Web-Proxies-Skill_Assessmnent_images\images\image1.png" alt="Image 1">
 
 **Send to Repeater:**
 Transfer this intercepted request to the Repeater tool in BurpSuite. Begin sending the request repeatedly.
+
+<img class="post-image-big" src="{{site.baseurl}}\assets\images\2023-12-1-Web-Proxies-Skill_Assessmnent_images\images\image10.png" alt="Image 10">
 
 **Exploring Race Conditions:**
 The server might exhibit a Race Condition or State Change behavior, where the flag only appears after sending the request multiple times. Observe any changes in the server's response or behavior of the button during this process.
@@ -24,21 +26,30 @@ The server might exhibit a Race Condition or State Change behavior, where the fl
 **Persistence Pays Off:**
 Keep sending the request through the Repeater tool until the flag eventually appears. This persistence and experimentation are crucial in identifying vulnerabilities reliant on timing or state changes.
 
+<img class="post-image-big" src="{{site.baseurl}}\assets\images\2023-12-1-Web-Proxies-Skill_Assessmnent_images\images\image6.png" alt="Image 6">
+
 ---
 ### The /admin.php page uses a cookie that has been encoded multiple times. Try to decode the cookie until you get a value with 31-characters. Submit the value as the answer.
 
 **Intercept the Request:**
 Access the "/admin.php" page and intercept the login request to acquire the encoded cookie.
 
+<img class="post-image-small" src="{{site.baseurl}}\assets\images\2023-12-1-Web-Proxies-Skill_Assessmnent_images\images\image8.png" alt="Image 8">
+
+
 **Decode the Cookie:**
 Upon inspecting the cookie, it seems to be initially encoded in hexadecimal format. However, decoding this reveals another 64-character string, indicating a closer alignment with Base64 encoding.
 
 Proceeding with both decoding methods—first hex decoding followed by Base64—unveils a string of 31 characters, meeting the criteria specified in the challenge.
 
+<img class="post-image-big" src="{{site.baseurl}}\assets\images\2023-12-1-Web-Proxies-Skill_Assessmnent_images\images\image3.png" alt="Image 3">
+
 Once you decode the cookie, you will notice that it is only 31 characters long, which appears to be an md5 hash missing its last character. So, try to fuzz the last character of the decoded md5 cookie with all alpha-numeric characters, while encoding each request with the encoding methods you identified above. (You may use the "alphanum-case.txt" wordlist from Seclist for the payload)
 
 **Sending the Initial Request:**
 Using BurpSuite, forward the initial request to the Intruder, ensuring to isolate and parameterize only the cookie for modification.
+
+<img class="post-image-big" src="{{site.baseurl}}\assets\images\2023-12-1-Web-Proxies-Skill_Assessmnent_images\images\image3.png" alt="Image 3">
 
 **Setting Up Payload Processing:**
 Navigate to the "Payloads" tab within the Intruder tool. Under "Payload Processing," add the following modifications:
@@ -52,6 +63,7 @@ Navigate to the "Payloads" tab within the Intruder tool. Under "Payload Processi
 
 **Including the Alphanumeric Wordlist:**
 In the "Payload Options," incorporate the "alphanum-case.txt" wordlist from Seclist and start the attack.
+<img class="post-image-big" src="{{site.baseurl}}\assets\images\2023-12-1-Web-Proxies-Skill_Assessmnent_images\images\image7.png" alt="Image 7">
 
 **Observing Length Changes:**
 Monitor the attack progress within BurpSuite. Note any variations or patterns in the lengths of the responses.
