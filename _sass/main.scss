@@ -70,6 +70,20 @@ header {
   color: black;
   padding: 20px;
 }
+
+/* For paragraphs within the container */
+body .container p {
+  text-align: left; /* Align paragraphs to the left */
+  margin-bottom: 15px; /* Add some space between paragraphs */
+}
+
+/* For lists within the container */
+body .container ul,
+body .container ol {
+  text-align: left; /* Align lists to the left */
+  padding-left: 20px; /* Add some left padding for better readability */
+}
+
 /* Footer styles */
 footer {
   margin-top: 40px;
