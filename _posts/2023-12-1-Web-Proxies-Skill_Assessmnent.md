@@ -39,6 +39,7 @@ Access the "/admin.php" page and intercept the login request to acquire the enco
 Upon inspecting the cookie, it seems to be initially encoded in hexadecimal format. However, decoding this reveals another 64-character string, indicating a closer alignment with Base64 encoding. Proceeding with both decoding methods—first hex decoding followed by Base64—unveils a string of 31 characters, meeting the criteria specified in the challenge.
 
 <img class="post-image-big" src="{{site.baseurl}}\assets\images\2023-12-1-Web-Proxies-Skill_Assessmnent_images\images\image3.png" alt="Image 3">
+
 ---
 
 ### Once you decode the cookie, you will notice that it is only 31 characters long, which appears to be an md5 hash missing its last character. So, try to fuzz the last character of the decoded md5 cookie with all alpha-numeric characters, while encoding each request with the encoding methods you identified above. (You may use the "alphanum-case.txt" wordlist from Seclist for the payload) 
