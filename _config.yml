@@ -15,7 +15,7 @@ avatar: /assets/images/Owl.png
 tagline: Bounty hunter by night, security advocate by day
 
 # A longer description used for the description meta tag. Also used as fallback for pages that don't provide their own description, and also as part of the page's title tag if neither page.title nor site.tagline has been defined.
-description: Minimalistic Jekyll theme that automatically supports dark and light modes for blogs
+description:  Web exploits and Vulnerability Research
 
 # The full URL to your site. Note: site.github.url will be used by default.
 url: "https://kenkeyless.github.io"
