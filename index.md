@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink:/home/
+permalink: /home/
 ---
 
 ## [Digital Dreamscapes:](#digital-dreamscapes)
