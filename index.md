@@ -11,8 +11,8 @@ permalink:
 
 Creating Ethereal Soundscapes in Trance Music
 
-## [Reverse Shell Cheat Sheet:](https://kenkeyless.github.io/Reverse-Shell-Cheat-Sheet) 
-<a href="">
+## [Reverse Shell Cheat Sheet:](/Reverse-Shell-Cheat-Sheet/) 
+
   
 
 Tips for Perfecting Your Techno Tracks
