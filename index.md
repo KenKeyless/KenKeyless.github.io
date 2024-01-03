@@ -11,11 +11,9 @@ permalink:
 
 Creating Ethereal Soundscapes in Trance Music
 
-## [Mastering the Mix:](#mastering-the-mix) 
-<a href="project2.html">
-  <img class="project-image" src="https://cdn-images.threadless.com/threadless-media/artist_shops/shops/ALEXBASSE/products/227119/shirt-1494585437-2e9d8ae2fb0b90b7ef660a7dff2f68cc.png?v=3&d=eyJvcHMiOiBbWyJ0cmltIiwgW2ZhbHNlLCBmYWxzZV0sIHt9XSwgWyJyZXNpemUiLCBbXSwgeyJ3aWR0aCI6IDk5Ni4wLCAiYWxsb3dfdXAiOiBmYWxzZSwgImhlaWdodCI6IDk5Ni4wfV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzEyMDAsIDEyMDBdLCB7ImJhY2tncm91bmQiOiAiZmZmZmZmIn1dLCBbInJlc2l6ZSIsIFs4MDBdLCB7fV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzgwMCwgODAwLCAiI2ZmZmZmZiJdLCB7fV0sIFsiZW5jb2RlIiwgWyJqcGciLCA4NV0sIHt9XV0sICJmb3JjZSI6IGZhbHNlLCAib25seV9tZXRhIjogZmFsc2V9" alt="Project 2">
-</a>
-
+## [Reverse Shell Cheat Sheet:](#reverse-shell-cheat-sheet) 
+<a href="https://kenkeyless.github.io/Reverse-Shell-Cheat-Sheet">
+  
 
 Tips for Perfecting Your Techno Tracks
 
