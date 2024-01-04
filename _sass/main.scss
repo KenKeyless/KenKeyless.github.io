@@ -84,14 +84,6 @@ body .container ol {
   padding-left: 20px; /* Add some left padding for better readability */
 }
 
-/*Bootleg Code Block*/
-pre {
-  background-color:#FFFFFF ;
-  display: block;
-  font-family: monospace;
-  white-space: pre-wrap;
-}
-
 /* Footer styles */
 footer {
   margin-top: 40px;
@@ -111,6 +103,19 @@ body .container .post-image-small {
 /* Navbar centerd with logo */
 ul.navbar-nav.me-auto {
   padding-left: 20px;
+}
+
+/*Bootleg Code Block*/
+pre {
+  background-color:#FFFFFF ;
+  display: block;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+/*Table Style*/
+.table {
+  border: 1px solid #000000;
+  padding: 10px;
 }
 
 /* Link colors */
