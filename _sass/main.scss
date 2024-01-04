@@ -9,7 +9,7 @@
 /* Body styles */
 body {
   background-color: #333333 ;
-  color: black;
+  color: #000000;
   font-family: 'Consolas', monospace;
   text-align: center;
   padding: 50px 200px 500px; /* Top Right Bottom Left */
@@ -32,7 +32,7 @@ header {
 /* Navigation Bar styles */
 .navbar {
   text-align: center;
-  color: #fff;
+  color: #FFFFFF ;
   padding: 10px; /* Add padding to the navbar */
 }
 .navbar ul {
@@ -67,7 +67,7 @@ header {
   display: flex;
   flex-direction: column;
   background-color: #BBBBBB;
-  color: black;
+  color: #000000 ;
   padding: 20px;
 }
 
