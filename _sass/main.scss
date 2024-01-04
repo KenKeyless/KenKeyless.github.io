@@ -8,7 +8,7 @@
 
 /* Body styles */
 body {
-  background-color:  #626262  ;
+  background-color: #333333 ;
   color: black;
   font-family: 'Consolas', monospace;
   text-align: center;
@@ -17,7 +17,7 @@ body {
 
 /* Change the title color */
 h3 {
-  color: #50459b ; /* Set title color */
+  color: #0000aa; /* Set title color */
 }
 
 /* Banner styles */
@@ -25,14 +25,14 @@ header {
   width: 90%; /* Set a relative width for the header */
   max-width: 1000px; /* Set a maximum width to prevent excessive expansion */
   margin: 0 auto; /* Center the header horizontally */
-  background-color: #adadad ;
-  color:  #898989;
+  background-color: #BBBBBB;
+  color: #777777;
 }
 
 /* Navigation Bar styles */
 .navbar {
   text-align: center;
-  color:  #ffffff;
+  color: #fff;
   padding: 10px; /* Add padding to the navbar */
 }
 .navbar ul {
@@ -56,7 +56,7 @@ header {
   margin: 0 auto; /* Center the column horizontally */
   text-align: left;
   padding: 20px;
-  background-color: #adadad ;
+  background-color: #BBBBBB;
 }
 
 /* Container styles */
@@ -66,7 +66,7 @@ header {
   margin: 0 auto; /* Center the container horizontally */
   display: flex;
   flex-direction: column;
-  background-color: #adadad ;
+  background-color: #BBBBBB;
   color: black;
   padding: 20px;
 }
@@ -86,7 +86,7 @@ body .container ol {
 
 /*Bootleg Code Block*/
 pre {
-  background-color: #ababab;
+  background-color: #333333;
   display: block;
   font-family: monospace;
   white-space: pre-wrap;
@@ -95,7 +95,7 @@ pre {
 /* Footer styles */
 footer {
   margin-top: 40px;
-  background-color: #adadad ;
+  background-color: #BBBBBB ;
 }
 
 body .container .post-image-big {
@@ -108,7 +108,7 @@ body .container .post-image-small {
   height: auto;
 }
 
-/* Navbar centerd wiht logo */
+/* Navbar centerd with logo */
 ul.navbar-nav.me-auto {
   padding-left: 20px;
 }
