@@ -3,19 +3,11 @@ layout: default
 permalink:
 ---
 
-## [Digital Dreamscapes:](#digital-dreamscapes)
-<a href="project1.html">
-  <img class="project-image" src="https://blankrecordings.files.wordpress.com/2014/03/black-and-white-spiral-abstract-hd-wallpaper-1920x1080-8858.jpg" alt="Project 1">
-</a>
-
-
-Creating Ethereal Soundscapes in Trance Music
+## [Top 50 Ports:](/Port-List/)
+Must know ports
 
 ## [Reverse Shell Cheat Sheet:](/Reverse-Shell-Cheat-Sheet/) 
-
-  
-
-Tips for Perfecting Your Techno Tracks
+One liners for reverse shells
 
 ## [Project 3](#project3)
 Project Description
