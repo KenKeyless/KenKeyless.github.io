@@ -84,8 +84,10 @@ body .container ol {
   padding-left: 20px; /* Add some left padding for better readability */
 }
 pre {
-  background-color: #f4f4f4;
-  word-wrap: break-word;
+  background-color: #ababab;
+  display: block;
+  font-family: monospace;
+  white-space: pre-wrap;
 }
 
 /* Footer styles */
