@@ -3,23 +3,26 @@ layout: page
 permalink: /posts/
 ---
 
-<div class="archive">
-  <h1 class="archive-category">Hack the Box</h1>
-  {% for post in site.posts %}
-    {% if post.categories contains 'Hack the Box' %}
-      <div class="archive-item">
-        <a href="{{ post.url | relative_url }}" class="archive-title fs-4">{{ post.title }}</a>
-      </div>
-    {% endif %}
-  {% endfor %}
+## Hack the Box
 
-  <h1 class="archive-category">HTB Academy</h1>
-  {% for post in site.posts %}
-    {% if post.categories contains 'HTB Academy' %}
-      <div class="archive-item">
-        <a href="{{ post.url | relative_url }}" class="archive-title fs-4">{{ post.title }}</a>
-      </div>
-    {% endif %}
-  {% endfor %}
+- [Post 1](/hack-the-box-post-1/)
+- [Post 2](/hack-the-box-post-2/)
+- [Post 3](/hack-the-box-post-3/)
 
-  </div>
+## HTB Academy
+
+- [Web Proxies Skill Assessment](/Web-Proxies-Skill-Assessment/)
+- [Post 2](/htb-academy-post-2/)
+- [Post 3](/htb-academy-post-3/)
+
+## Proving Grounds
+
+- [Post 1](/proving-grounds-post-1/)
+- [Post 2](/proving-grounds-post-2/)
+- [Post 3](/proving-grounds-post-3/)
+
+## PortSwigger
+
+- [Post 1](/port-swigger-post-1/)
+- [Post 2](/port-swigger-post-2/)
+- [Post 3](/port-swigger-post-3/)
