@@ -11,7 +11,7 @@ permalink: /posts/
 
 ## HTB Academy
 
-[Web Proxies Skill Assessment](/Web-Proxies-Skill-Assessment/)
+[Web Proxies Skill Assessment](/_posts/Web-Proxies-Skill-Assessment/)
 
 [Post 2](/htb-academy-post-2/)
 
