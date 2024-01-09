@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My Post Title"
+title: "Web Proxies Skill Assessment"
 categories: ["HTB Academy"]
 ---
 <br>
