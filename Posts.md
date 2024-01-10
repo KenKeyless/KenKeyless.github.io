@@ -1,6 +1,7 @@
 ---
 layout: page
 permalink: /posts/
+title: Posts
 ---
 
 ## Hack the Box
