@@ -1,10 +1,8 @@
 ---
 layout: page
 permalink: /posts/
-title: Posts
+title: 
 ---
-
-## Hack the Box
 
 ## HTB Academy
 
