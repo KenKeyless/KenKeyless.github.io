@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Web Proxies Skill Assessment"
+title: "Web-Proxies-Skill-Assessment"
 ---
 <br>
 ### The /lucky.php page has a button that appears to be disabled. Try to enable the button, and then click it to get the flag.
