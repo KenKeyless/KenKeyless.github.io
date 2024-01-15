@@ -4,12 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Software engineer by day, bounty hunter by night. When offline, I find zen in the craftsmanship of precision blades, and custom keyboards. Join me on this website for security secrets, vulnerability research, and maybe a peek into my analog obsessions.
 
-### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
