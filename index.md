@@ -2,6 +2,7 @@
 layout: default
 permalink:
 ---
+## [Command Injection Payload List](/Command-Injection-Payload-List/)
 
 ## [OWASP Top 10](/OWASP-Top-Ten/)
 
