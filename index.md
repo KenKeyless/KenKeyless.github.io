@@ -2,7 +2,7 @@
 layout: default
 permalink:
 ---
-## [Command Injection Payload List](/Command-Injection-Payload-List/)
+## [Command Injection Payload List](https://github.com/payloadbox/command-injection-payload-list){:target="_blank"}
 
 ## [Information Gathering Cheat Sheet](/Information-Gathering-Cheat-Sheet/) 
 
