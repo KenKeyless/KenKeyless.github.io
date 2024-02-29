@@ -285,5 +285,5 @@ zoomeye
 <td>Mutated bruteforcing against the target web server.</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 </div>
