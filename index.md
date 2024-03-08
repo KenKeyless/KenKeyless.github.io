@@ -10,6 +10,8 @@ permalink:
 
 ## [Reverse Shell Cheat Sheet](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet){:target="_blank"}
 
+## [SecLists](https://github.com/danielmiessler/SecLists){:target="_blank"}
+
 ## [Top 50 Ports](/Port-List/)
 
 
