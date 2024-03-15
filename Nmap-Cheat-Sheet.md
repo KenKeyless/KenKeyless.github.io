@@ -182,91 +182,90 @@
 </div>
 
 <h2>Common Commands for Reconnaissance</h2>
-<div class="table-responsive">
-    <table class="table table-striped text-left">
-        <thead>
-            <tr>
-                <th><strong>Command</strong></th>
-                <th><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><code>nmap -sP &lt;target&gt;</code></td>
-                <td>Simple Ping Scan. <!-- Discover live hosts using a simple ping scan. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap -sn &lt;target&gt;</code></td>
-                <td>Ping Scan. <!-- Perform a ping scan (no port scan) to determine which hosts are up. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap -T4 -F &lt;target&gt;</code></td>
-                <td>Aggressive Fast Scan. <!-- Perform a fast scan with aggressive timing options to discover open ports on live hosts. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap -sS &lt;target&gt;</code></td>
-                <td>Stealthy TCP SYN Scan. <!-- Stealthy scan using TCP SYN packets to discover open ports without completing the full connection. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap <target> --top-ports 100</code></td>
-                <td>Scan Only the 100 Most Common Ports. <!-- Scan only the top 100 most common ports on the target. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap <target> -p-</code></td>
-                <td>Scan All Ports. <!-- Scan all 65535 ports on the target. Can take longer to complete. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap <target> -sU</code></td>
-                <td>UDP Scan. <!-- Scan for open UDP ports on the target. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap -sU --top-ports=100 &lt;target&gt;</code></td>
-                <td>UDP Scan on Top 100 Ports. <!-- Discover UDP services by scanning the top 100 ports. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap -sV --version-intensity=3 &lt;target&gt;</code></td>
-                <td>Service Version Detection with Medium Intensity. <!-- Perform service version detection with medium intensity to balance accuracy and speed. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap <target> -sV -sC -O</code></td>
-                <td>Version Detection with NSE-scripts and OS Identification. <!-- Identify service versions, run default NSE scripts, and attempt OS detection. --></td>
-            </tr>
-            <tr>
-                <td><code><strong>nmap -sC -sV -A -oN &lt;ip <target>&gt;</strong></code></td>
-                <td>Version Detection with NSE-scripts and OS Identification, Output to File. <!-- Run default NSE scripts, identify service versions, attempt OS detection, and save output to a file. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap -sC -sV -A -p- 1-65535 -oN &lt;ip <target>&gt;</code></td>
-                <td>Version Detection with NSE-scripts and OS Identification, Scan All Ports, Output to File. <!-- Similar to the above command, but scans all 65535 ports on the target. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap -sV -sT -p445 --script vuln &lt;ip <target>&gt;</code></td>
-                <td>Vulnerability Scan with NSE-scripts. <!-- Scan port 445 (commonly associated with SMB) and run vulnerability detection scripts. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap -sV -sT -p445 --script safe &lt;ip <target>&gt;</code></td>
-                <td>Safe Script Scan. <!-- Scan port 445 (commonly associated with SMB) and run safe scripts for non-intrusive information gathering. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap -sV -sT -p445 --script "vuln and safe" &lt;ip <target>&gt;</code></td>
-                <td>Combined Vulnerability and Safe Script Scan. <!-- Scan port 445 (commonly associated with SMB) and run both vulnerability detection and safe scripts. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap -Pn -sS -sV -O &lt;target&gt;</code></td>
-                <td>TCP SYN Scan with Version and OS Detection. <!-- Perform a TCP SYN scan with service version detection and OS detection, skipping host discovery. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap -O --osscan-guess &lt;target&gt;</code></td>
-                <td>OS Detection with OS Guess. <!-- Attempt to guess the OS of the target without pinging. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap --script="discovery" &lt;target&gt;</code></td>
-                <td>Discovery Script Execution. <!-- Run discovery scripts to gather additional information about the target network. --></td>
-            </tr>
-            <tr>
-                <td><code>nmap -vvv -Pn -A -iL listOfIP.txt</code></td>
-                <td>Comprehensive Monster Scan. <!-- Perform an aggressive scan including OS detection, service version detection, script scanning, and host discovery on a list of targets from a file. --></td>
-            </tr>
-        </tbody>
-    </table>
+<div class="table-responsive"><table class="table table-striped text-left">
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nmap -sP &lt;target&gt;</code></td>
+<td>Simple Ping Scan. <!-- Discover live hosts using a simple ping scan. --></td>
+</tr>
+<tr>
+<td><code>nmap -sn &lt;target&gt;</code></td>
+<td>Ping Scan. <!-- Perform a ping scan (no port scan) to determine which hosts are up. --></td>
+</tr>
+<tr>
+<td><code>nmap -T4 -F &lt;target&gt;</code></td>
+<td>Aggressive Fast Scan. <!-- Perform a fast scan with aggressive timing options to discover open ports on live hosts. --></td>
+</tr>
+<tr>
+<td><code>nmap -sS &lt;target&gt;</code></td>
+<td>Stealthy TCP SYN Scan. <!-- Stealthy scan using TCP SYN packets to discover open ports without completing the full connection. --></td>
+</tr>
+<tr>
+<td><code>nmap <target> --top-ports 100</code></td>
+<td>Scan Only the 100 Most Common Ports. <!-- Scan only the top 100 most common ports on the target. --></td>
+</tr>
+<tr>
+<td><code>nmap <target> -p-</code></td>
+<td>Scan All Ports. <!-- Scan all 65535 ports on the target. Can take longer to complete. --></td>
+</tr>
+<tr>
+<td><code>nmap <target> -sU</code></td>
+<td>UDP Scan. <!-- Scan for open UDP ports on the target. --></td>
+</tr>
+<tr>
+<td><code>nmap -sU --top-ports=100 &lt;target&gt;</code></td>
+<td>UDP Scan on Top 100 Ports. <!-- Discover UDP services by scanning the top 100 ports. --></td>
+</tr>
+<tr>
+<td><code>nmap -sV --version-intensity=3 &lt;target&gt;</code></td>
+<td>Service Version Detection with Medium Intensity. <!-- Perform service version detection with medium intensity to balance accuracy and speed. --></td>
+</tr>
+<tr>
+<td><code>nmap <target> -sV -sC -O</code></td>
+<td>Version Detection with NSE-scripts and OS Identification. <!-- Identify service versions, run default NSE scripts, and attempt OS detection. --></td>
+</tr>
+<tr>
+<td><code><strong>nmap -sC -sV -A -oN &lt;ip <target>&gt;</strong></code></td>
+<td>Version Detection with NSE-scripts and OS Identification, Output to File. <!-- Run default NSE scripts, identify service versions, attempt OS detection, and save output to a file. --></td>
+</tr>
+<tr>
+<td><code>nmap -sC -sV -A -p- 1-65535 -oN &lt;ip <target>&gt;</code></td>
+<td>Version Detection with NSE-scripts and OS Identification, Scan All Ports, Output to File. <!-- Similar to the above command, but scans all 65535 ports on the target. --></td>
+</tr>
+<tr>
+<td><code>nmap -sV -sT -p445 --script vuln &lt;ip <target>&gt;</code></td>
+<td>Vulnerability Scan with NSE-scripts. <!-- Scan port 445 (commonly associated with SMB) and run vulnerability detection scripts. --></td>
+</tr>
+<tr>
+<td><code>nmap -sV -sT -p445 --script safe &lt;ip <target>&gt;</code></td>
+<td>Safe Script Scan. <!-- Scan port 445 (commonly associated with SMB) and run safe scripts for non-intrusive information gathering. --></td>
+</tr>
+<tr>
+<td><code>nmap -sV -sT -p445 --script "vuln and safe" &lt;ip <target>&gt;</code></td>
+<td>Combined Vulnerability and Safe Script Scan. <!-- Scan port 445 (commonly associated with SMB) and run both vulnerability detection and safe scripts. --></td>
+</tr>
+<tr>
+<td><code>nmap -Pn -sS -sV -O &lt;target&gt;</code></td>
+<td>TCP SYN Scan with Version and OS Detection. <!-- Perform a TCP SYN scan with service version detection and OS detection, skipping host discovery. --></td>
+</tr>
+<tr>
+<td><code>nmap -O --osscan-guess &lt;target&gt;</code></td>
+<td>OS Detection with OS Guess. <!-- Attempt to guess the OS of the target without pinging. --></td>
+</tr>
+<tr>
+<td><code>nmap --script="discovery" &lt;target&gt;</code></td>
+<td>Discovery Script Execution. <!-- Run discovery scripts to gather additional information about the target network. --></td>
+</tr>
+<tr>
+<td><code>nmap -vvv -Pn -A -iL listOfIP.txt</code></td>
+<td>Comprehensive Monster Scan. <!-- Perform an aggressive scan including OS detection, service version detection, script scanning, and host discovery on a list of targets from a file. --></td>
+</tr>
+</tbody>
+</table>
 </div>
