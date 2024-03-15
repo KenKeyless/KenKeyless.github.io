@@ -8,6 +8,8 @@ title: ""
 
 [Web Proxies Skill Assessment](/posts/Web-Proxies-Skill-Assessment/)
 
-[Post 2](/htb-academy-post-2/)
+[Information Gathering Skills Assessment](posts/Information-Gathering-Skills-Assessment/)
 
-[Post 3](/htb-academy-post-3/)
+## TryHackMe
+
+[RootMe](/posts/RootMe/)
