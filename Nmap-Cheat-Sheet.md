@@ -180,7 +180,6 @@
 </tbody>
 </table>
 </div>
-
 <h2>Common Commands for Reconnaissance</h2>
 <div class="table-responsive"><table class="table table-striped text-left">
 <thead>
