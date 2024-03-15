@@ -231,23 +231,23 @@
 <td>Version Detection with NSE-scripts and OS Identification. <!-- Identify service versions, run default NSE scripts, and attempt OS detection. --></td>
 </tr>
 <tr>
-<td><code><strong>nmap -sC -sV -A -oN &lt;ip &lt;target&gt&gt;</strong></code></td>
+<td><code><strong>nmap -sC -sV -A -oN &lt;ip &lt;target&gt;</strong></code></td>
 <td>Version Detection with NSE-scripts and OS Identification, Output to File. <!-- Run default NSE scripts, identify service versions, attempt OS detection, and save output to a file. --></td>
 </tr>
 <tr>
-<td><code>nmap -sC -sV -A -p- 1-65535 -oN &lt;ip &lt;target&gt&gt;</code></td>
+<td><code>nmap -sC -sV -A -p- 1-65535 -oN &lt;ip &lt;target&gt;</code></td>
 <td>Version Detection with NSE-scripts and OS Identification, Scan All Ports, Output to File. <!-- Similar to the above command, but scans all 65535 ports on the target. --></td>
 </tr>
 <tr>
-<td><code>nmap -sV -sT -p445 --script vuln &lt;ip &lt;target&gt&gt;</code></td>
+<td><code>nmap -sV -sT -p445 --script vuln &lt;ip &lt;target&gt;</code></td>
 <td>Vulnerability Scan with NSE-scripts. <!-- Scan port 445 (commonly associated with SMB) and run vulnerability detection scripts. --></td>
 </tr>
 <tr>
-<td><code>nmap -sV -sT -p445 --script safe &lt;ip &lt;target&gt&gt;</code></td>
+<td><code>nmap -sV -sT -p445 --script safe &lt;ip &lt;target&gt;</code></td>
 <td>Safe Script Scan. <!-- Scan port 445 (commonly associated with SMB) and run safe scripts for non-intrusive information gathering. --></td>
 </tr>
 <tr>
-<td><code>nmap -sV -sT -p445 --script "vuln and safe" &lt;ip &lt;target&gt&gt;</code></td>
+<td><code>nmap -sV -sT -p445 --script "vuln and safe" &lt;ip &lt;target&gt;</code></td>
 <td>Combined Vulnerability and Safe Script Scan. <!-- Scan port 445 (commonly associated with SMB) and run both vulnerability detection and safe scripts. --></td>
 </tr>
 <tr>
