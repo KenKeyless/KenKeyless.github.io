@@ -12,6 +12,8 @@ permalink:
 
 ## [OWASP Top 10](/OWASP-Top-Ten/)
 
+## [PHP Reverse Shell](https://pentestmonkey.net/tag/php) {:target="_blank"}
+
 ## [Reverse Shell Cheat Sheet](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/){:target="_blank"}
 
 ## [Reverse Shell Generator](https://www.revshells.com/){:target="_blank"}
