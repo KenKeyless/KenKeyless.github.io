@@ -12,7 +12,7 @@ permalink:
 
 ## [OWASP Top 10](/OWASP-Top-Ten/)
 
-## [Reverse Shell Cheat Sheet](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet){:target="_blank"}
+## [Reverse Shell Cheat Sheet](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/){:target="_blank"}
 
 ## [Reverse Shell Generator](https://www.revshells.com/){:target="_blank"}
 
