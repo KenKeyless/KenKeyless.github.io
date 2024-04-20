@@ -26,14 +26,8 @@ permalink:
 
 
 
-<ul class="resource-list">
-  <li>
-    <a href="https://github.com/OWASP/CheatSheetSeries" target="_blank"><b>Web Application Security Cheat Sheet</b></a>
-  </li>
-  <li>
-    <a href="https://drive.google.com/drive/folders/11_WVbcLFqwkagS7vjpNMrRFEaLbmo7d2" target="_blank"><b>Ethical Hacking Resources</b></a>
-  </li>
-  <li>
-    <a href="https://nmap.org/docs.html" target="_blank"><b>Nmap Documentation</b></a>
-  </li>
-  </ul>
+<div class="resource-list">
+  <h2><a href="https://github.com/OWASP/CheatSheetSeries" target="_blank">Web Application Security Cheat Sheet</a></h2>
+  <h2><a href="https://drive.google.com/drive/folders/11_WVbcLFqwkagS7vjpNmrRFEaLbmo7d2" target="_blank">Ethical Hacking Resources</a></h2>
+  <h2><a href="https://nmap.org/docs.html" target="_blank">Nmap Documentation</a></h2>
+  </div>
