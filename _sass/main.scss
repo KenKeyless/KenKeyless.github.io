@@ -155,6 +155,24 @@ a:visited {
     height: auto;
   }
 
+  .resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin for better spacing */
+  }
+  
+  .resource-list li {
+    margin: 10px 0; /* Add space between list items */
+  }
+  
+  /* Media query for mobile styles */
+  @media (max-width: 768px) {
+    .resource-list li {
+      display: block;
+      width: 100%; /* Make each item take full width on mobile */
+    }
+  }
+
 }
 
 
