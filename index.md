@@ -8,7 +8,7 @@ permalink:
 
 ## [Information Gathering Cheat Sheet](/Information-Gathering-Cheat-Sheet/) 
 
-## [Nmap Cheat Sheet](/Nmap-Cheat-Sheet/)
+## [Nmap Cheat Sheet](https://highon.coffee/blog/nmap-cheat-sheet/){:target="_blank"}
 
 ## [OWASP Top 10](/OWASP-Top-Ten/)
 
