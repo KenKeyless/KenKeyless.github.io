@@ -156,23 +156,10 @@ a:visited {
   }
 
   .resource-list {
-    margin: 0; /* Remove default margin for better spacing */
-    padding: 0;
-  }
-  
-  .resource-list h2 {
-    margin: 20px 0; /* Increased space between headings */
-    font-weight: bold; /* Make headings bold */
-    display: inline-block; /* Allow text to wrap if needed */
-    width: 100%; /* Make headers take full width on mobile */
-  }
-  
-  /* Media query for additional mobile styles (optional) */
-  @media (max-width: 768px) {
-    .resource-list h2 {
-      text-align: center; /* Center align headings on mobile */
-    }
-  }
+    margin-top: 10px; /* Adjust as needed */
+    margin-bottom: 10px; /* Adjust as needed */
+    line-height: 1.5; /* Adjust as needed */
+}
 }
 
 
