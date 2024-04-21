@@ -156,9 +156,13 @@ a:visited {
   }
 
   .resource-list {
-    display: block;
-    margin-bottom: 10px; /* Adjust the margin as needed */
-}
+    display: block;  /* Ensure the list displays as a block element */
+    margin-bottom: 10px;  /* Add space between the list and other elements */
+  }
+  
+  .resource-list a {  /* Target all links within the list */
+    text-decoration: none;  /* Remove underlines from links */
+  }  
 }
 
 
