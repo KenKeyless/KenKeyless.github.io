@@ -2,16 +2,38 @@
 layout: default
 permalink:
 ---
-<div class="resource-list">
-    <a href="https://github.com/payloadbox/command-injection-payload-list" target="_blank">Command Injection Payload List</a>
-    <a href="https://gtfobins.github.io/" target="_blank">GTFOBins</a>
-    <a href="/Information-Gathering-Cheat-Sheet/">Information Gathering Cheat Sheet</a>
-    <a href="https://highon.coffee/blog/nmap-cheat-sheet/" target="_blank">Nmap Cheat Sheet</a>
-    <a href="/OWASP-Top-Ten/">OWASP Top 10</a>
-    <a href="https://pentestmonkey.net/tag/php" target="_blank">PHP Reverse Shell</a>
-    <a href="https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/" target="_blank">Reverse Shell Cheat Sheet</a>
-    <a href="https://www.revshells.com/" target="_blank">Reverse Shell Generator</a>
-    <a href="https://github.com/danielmiessler/SecLists" target="_blank">SecLists</a>
-    <a href="/Port-List/">Top 50 Ports</a>
-    <a href="https://github.com/sc0tfree/updog" target="_blank">Updog (HTTPServer)</a>
-</div>
+## [Command Injection Payload List](https://github.com/payloadbox/command-injection-payload-list){:target="_blank"}
+
+## [GTFOBins](https://gtfobins.github.io/){:target="_blank"}
+
+## [Information Gathering Cheat Sheet](/Information-Gathering-Cheat-Sheet/) 
+
+## [Nmap Cheat Sheet](https://highon.coffee/blog/nmap-cheat-sheet/){:target="_blank"}
+
+## [OWASP Top 10](/OWASP-Top-Ten/)
+
+## [PHP Reverse Shell](https://pentestmonkey.net/tag/php){:target="_blank"}
+
+## [Reverse Shell Cheat Sheet](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/){:target="_blank"}
+
+## [Reverse Shell Generator](https://www.revshells.com/){:target="_blank"}
+
+## [SecLists](https://github.com/danielmiessler/SecLists){:target="_blank"}
+
+## [Top 50 Ports](/Port-List/)
+
+## [Updog(HTTPServer)](https://github.com/sc0tfree/updog){:target="_blank"}
+
+
+
+<ul class="resource-list">
+  <li>
+    <a href="https://github.com/OWASP/CheatSheetSeries" target="_blank"><b>Web Application Security Cheat Sheet</b></a>
+  </li>
+  <li>
+    <a href="https://drive.google.com/drive/folders/11_WVbcLFqwkagS7vjpNMrRFEaLbmo7d2" target="_blank"><b>Ethical Hacking Resources</b></a>
+  </li>
+  <li>
+    <a href="https://nmap.org/docs.html" target="_blank"><b>Nmap Documentation</b></a>
+  </li>
+  </ul>
