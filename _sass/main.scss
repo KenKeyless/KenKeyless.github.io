@@ -158,9 +158,11 @@ a:visited {
   .resource-list {
     display: block;  /* Ensure the list displays as a block element */
     margin-bottom: 10px;  /* Add space between the list and other elements */
+    padding: 5px;  /* Add some padding for spacing within the list */
   }
   
-  .resource-list a {  /* Target all links within the list */
+  .resource-list a {
+    display: block;  /* Make each link display as a block element */
     text-decoration: none;  /* Remove underlines from links */
   }  
 }
