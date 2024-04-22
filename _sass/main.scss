@@ -156,6 +156,7 @@ a:visited {
   }
 
   .resource-list {
+    display: block;  /* Ensure the list displays as a block element */
     list-style: none;
     padding: 5px;
     margin: 0; /* Remove default margin for better spacing */
