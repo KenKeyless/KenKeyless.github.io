@@ -157,21 +157,15 @@ a:visited {
 
   .resource-list {
     display: block;  /* Ensure the list displays as a block element */
-    list-style: none;
-    padding: 5px;
-    margin: 0; /* Remove default margin for better spacing */
+    list-style: none;  /* Remove default bullet points */
+    margin-bottom: 10px;  /* Add space between the list and other elements */
+    padding: 5px;  /* Add some padding for spacing within the list (optional) */
   }
   
-  .resource-list li {
-    margin: 10px 0; /* Add space between list items */
-  }
-  
-  /* Media query for mobile styles */
-  @media (max-width: 768px) {
-    .resource-list li {
-      display: block;
-      width: 100%; /* Make each item take full width on mobile */
-    }
+  .resource-list a {
+    display: block;  /* Make each link display as a block element */
+    text-decoration: none;  /* Remove underlines from links */
+
   }
 }
 
