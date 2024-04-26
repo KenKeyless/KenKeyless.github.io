@@ -22,13 +22,20 @@
       const originalText = siteNameElement.innerText;
 
       setInterval(() => {
-          let modifiedText = '';
-          for (const char of originalText) {
-              modifiedText += l33tReplace(char);
-          }
-          siteNameElement.innerText = modifiedText;
-      }, 500); // Change every 500 milliseconds (half a second)
-  }
+        let modifiedText = '';
+        for (const char of originalText) {
+            const randomNum = Math.random();
+            if (randomNum < 0.33) {
+                modifiedText += char.toUpperCase();
+            } else if (randomNum < 0.66) {
+                modifiedText += char.toLowerCase();
+            } else {
+                modifiedText += l33tReplace(char);
+            }
+        }
+        siteNameElement.innerText = modifiedText;
+    }, 500); // Change every 500 milliseconds (half a second)
+}
 
   function l33tReplace(char) {
       switch (char.toLowerCase()) {
