@@ -154,20 +154,21 @@ a:visited {
     max-width: 100%;
     height: auto;
   }
-
   .resource-list {
-    display: block;  /* Ensure the list displays as a block element */
-    list-style: none;  /* Remove default bullet points */
-    margin-bottom: 10px;  /* Add space between the list and other elements */
-    padding: 5px;  /* Add some padding for spacing within the list (optional) */
-  }
-  
-  .resource-list a {
-    display: block;  /* Make each link display as a block element */
-    text-decoration: none;  /* Remove underlines from links */
-
-  }
+    list-style-type: none;
+    padding-left: 0;
 }
+
+.resource-list li {
+    margin-bottom: 10px; /* Adjust the space between items as needed */
+}
+
+.resource-list li a {
+    display: block;
+    font-size: 1.5em; /* Adjust the font size as needed */
+}
+
+
 
 
 
