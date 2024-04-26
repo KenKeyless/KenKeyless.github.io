@@ -154,16 +154,16 @@ a:visited {
     max-width: 100%;
     height: auto;
   }
-  .resource-list {
+  ul.resource-list {
     list-style-type: none;
     padding-left: 0;
 }
 
-.resource-list li {
+ul.resource-list li {
     margin-bottom: 10px; /* Adjust the space between items as needed */
 }
 
-.resource-list li a {
+ul.resource-list li a {
     display: block;
     font-size: 1.5em; /* Adjust the font size as needed */
 }
