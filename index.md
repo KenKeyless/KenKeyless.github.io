@@ -26,8 +26,8 @@ permalink:
 
 
 
-<ul class="resource-list">
-<li><a href="https://example.com/resource1">Resource 1</a></li>
-<li><a href="https://example.com/resource2">Resource 2</a></li>
-<li><a href="https://example.com/resource3">Resource 3</a></li>
-</ul>
+<div class="resource-list">
+    <a href="https://example.com/resource1">Resource 1</a>
+    <a href="https://example.com/resource2">Resource 2</a>
+    <a href="https://example.com/resource3">Resource 3</a>
+</div>

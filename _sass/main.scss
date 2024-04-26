@@ -154,17 +154,13 @@ a:visited {
     max-width: 100%;
     height: auto;
   }
-  ul.resource-list {
-    list-style-type: none;
+  .resource-list {
     padding-left: 0;
 }
 
-ul.resource-list li {
-    margin-bottom: 10px; /* Adjust the space between items as needed */
-}
-
-ul.resource-list li a {
+.resource-list a {
     display: block;
+    margin-bottom: 10px; /* Adjust the space between items as needed */
     font-size: 1.5em; /* Adjust the font size as needed */
 }
 }
