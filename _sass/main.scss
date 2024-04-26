@@ -154,20 +154,6 @@ a:visited {
     max-width: 100%;
     height: auto;
   }
-  
-/* For links within an element with both .container and .resource-list classes */
-body .container .resource-list a {
-  display: block; /* Display links as block elements */
-  text-align: left; /* Align links to the left */
-  margin-bottom: 10px; /* Add some space between links */
-  color: #000000; /* Set link color */
-  text-decoration: none; /* Remove underline from links */
-}
-
-/* Hover effect for links within .container.resource-list */
-body .container .resource-list a:hover {
-  text-decoration: underline; /* Underline links on hover */
-}
 }
 
 
