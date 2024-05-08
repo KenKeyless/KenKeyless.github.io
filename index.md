@@ -14,6 +14,9 @@ permalink:
 ## [GTFOBins](https://gtfobins.github.io/){:target="_blank"}
 <br>
 
+## [Hunter](https://hunter.io/){:target="_blank"}
+<br>
+
 ## [Information Gathering Cheat Sheet](/Information-Gathering-Cheat-Sheet/) 
 <br>
 
@@ -37,6 +40,9 @@ permalink:
 
 ## [SecLists](https://github.com/danielmiessler/SecLists){:target="_blank"}
 <br>
+
+## [Shodan](https://www.shodan.io/){:target="_blank"}
+<br> 
 
 ## [Top 50 Ports](/Port-List/)
 <br>
