@@ -11,7 +11,7 @@ permalink:
 ## [Disk Scrubber](https://www.summitcn.com/hdscrub.html){:target="_blank"}
 <br>
 
-## [DNSDunpster](https://dnsdumpster.com/){:target="_blank"}
+## [DNSDumpster](https://dnsdumpster.com/){:target="_blank"}
 <br>
 
 ## [Exploit Database](https://www.exploit-db.com/){:target="_blank"}
