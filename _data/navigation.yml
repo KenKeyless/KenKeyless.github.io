@@ -4,5 +4,6 @@
   link: /posts/
 - name: About
   link: /about/
-
+- name: IP Info
+  link: /ipinfo/
  

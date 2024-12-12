@@ -8,7 +8,7 @@ permalink:
 ## [CVE Search](https://cve.mitre.org/cve/search_cve_list.html){:target="_blank"}
 <br>
 
-## [Disk Scrubber](https://www.summitcn.com/hdscrub.html){:target="_blank"}
+## [DBAN](https://dban.org/){:target="_blank"}
 <br>
 
 ## [DNSDumpster](https://dnsdumpster.com/){:target="_blank"}
