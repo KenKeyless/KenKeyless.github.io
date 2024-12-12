@@ -71,13 +71,13 @@ title: ""
           const ipData = ipApiData || ipApiComData;
           
           ipDetails.innerHTML = `
-              <p><strong>ISP:</strong> ${ipData.isp || 'Cannot fetch this right now'}</p>
-              <p><strong>IP Address:</strong> ${ipData.query || ipData.ip || 'Cannot fetch this right now'}</p>
-              <p><strong>Continent:</strong> ${ipData.continent || 'Cannot fetch this right now'}</p>
-              <p><strong>Country:</strong> ${ipData.country || ipData.country_name || 'Cannot fetch this right now'}</p>
-              <p><strong>Timezone:</strong> ${ipData.timezone || 'Cannot fetch this right now'}</p>
-              <p><strong>Region:</strong> ${ipData.regionName || 'Cannot fetch this right now'}</p>
-              <p><strong>City:</strong> ${ipData.city || 'Cannot fetch this right now'}</p>
+              <p><strong>ISP:</strong> ${ipData.isp || 'Fetch Failed'}</p>
+              <p><strong>IP Address:</strong> ${ipData.query || ipData.ip || 'Fetch Failed'}</p>
+              <p><strong>Continent:</strong> ${ipData.continent || 'Fetch Failed'}</p>
+              <p><strong>Country:</strong> ${ipData.country || ipData.country_name || 'Fetch Failed'}</p>
+              <p><strong>Timezone:</strong> ${ipData.timezone || 'Fetch Failed'}</p>
+              <p><strong>Region:</strong> ${ipData.regionName || 'Fetch Failed'}</p>
+              <p><strong>City:</strong> ${ipData.city || 'Fetch Failed'}</p>
               <p><strong>Mobile:</strong> ${ipData.mobile ? 'Yes' : 'No'}</p>
               <p><strong>Proxy:</strong> ${ipData.proxy ? 'Yes' : 'No'}</p>
               <p><strong>Hosting:</strong> ${ipData.hosting ? 'Yes' : 'No'}</p>
