@@ -3,87 +3,65 @@ layout: page
 permalink: /ipinfo/
 title: ""
 ---
-<div id="ip-details" class="small-text">
-  <!-- IP details go here -->
-</div>
-
-<script>
-  // Function to fetch IP details from APIs  
-async function fetchIpDetails() {  
-  // List of API URLs to fetch IP details from  
-  const apiUrls = [  
-   'https://ipapi.co/json/', // Primary API  
-   'http://ip-api.com/json/?fields=continent,country,regionName,city,district,timezone,isp,org,mobile,proxy,hosting,query' // Fallback API  
-  ];  
-  const maxRetries = 3; // Maximum number of retries  
-  const retryDelay = 1000; // Delay between retries (1 second)  
+<div id="ip-details" class="small-text">  
+  <!-- IP details go here -->  
+</div>  
   
-  let ipData = null; // Initialize IP data variable  
-  let retries = 0; // Initialize retry counter  
+<script>  
+  // Constants  
+  const PRIMARY_API = 'https://ipapi.co/json/';  
+  const FALLBACK_API = 'http://ip-api.com/json/?fields=continent,country,regionName,city,timezone,isp,org';  
   
-  // Loop until IP data is fetched or maximum retries are reached  
-  while (!ipData && retries < maxRetries) {  
+  /**  
+  * Fetches JSON data from the provided API URL.  
+  * @param {string} url - API URL  
+  * @returns {Promise<Object>} JSON data  
+  */  
+  async function fetchJson(url) {  
    try {  
-    // Fetch IP data from API  
-    const response = await fetch(apiUrls[retries % apiUrls.length]);  
-    if (response.ok) {  
-      // If response is OK, parse JSON data  
-      ipData = await response.json();  
-    } else {  
-      // If response is not OK, increment retry counter and wait for retry delay  
-      retries++;  
-      await new Promise(resolve => setTimeout(resolve, retryDelay));  
-    }  
+    const response = await fetch(url);  
+    return await response.ok ? response.json() : null;  
    } catch (error) {  
-    // If error occurs, increment retry counter and wait for retry delay  
-    retries++;  
-    await new Promise(resolve => setTimeout(resolve, retryDelay));  
+    console.error('Request failed:', error);  
+    return null;  
    }  
   }  
   
-  // Return fetched IP data  
-  return ipData;  
-}  
-  
-// Function to create HTML string for IP details  
-function createIpDetailsHtml(ipData) {  
-  // If IP data is null, return error message  
-  if (!ipData) {  
-   return '<p>Failed to retrieve IP details.</p>';  
+  /**  
+  * Retrieves IP details with fallback.  
+  * @returns {Promise<Object>} IP details  
+  */  
+  async function getIpDetails() {  
+   let ipData = await fetchJson(PRIMARY_API);  
+   if (!ipData) {  
+    ipData = await fetchJson(FALLBACK_API);  
+   }  
+   return ipData;  
   }  
   
-  // Create HTML string for IP details  
-  return `  
-   <p><strong>ISP:</strong> ${ipData.org || ipData.isp || 'Failed Request'}</p> <!-- ISP name -->  
-   <p><strong>IP Address:</strong> ${ipData.query || ipData.ip || 'Failed Request'}</p> <!-- IP address -->  
-   <p><strong>Country:</strong> ${ipData.country || ipData.country_name || 'Failed Request'}</p> <!-- Country name -->  
-   <p><strong>Timezone:</strong> ${ipData.timezone || 'Failed Request'}</p> <!-- Timezone -->  
-   <p><strong>Region:</strong> ${ipData.regionName || ipData.region || 'Failed Request'}</p> <!-- Region name -->  
-   <p><strong>City:</strong> ${ipData.city || 'Failed Request'}</p> <!-- City name -->  
-   <p><strong>Mobile:</strong> ${ipData.mobile === 'yes' ? 'Yes' : (ipData.mobile ? 'No' : 'No')}</p> <!-- Mobile status -->  
-   <p><strong>Proxy:</strong> ${ipData.proxy === 'yes' ? 'Yes' : (ipData.proxy ? 'No' : 'No')}</p> <!-- Proxy status -->  
-   <p><strong>Hosting:</strong> ${ipData.hosting === 'yes' ? 'Yes' : (ipData.hosting ? 'No' : 'No')}</p> <!-- Hosting status -->  
-   <p><strong>Browser:</strong> ${navigator.userAgent}</p> <!-- Browser user agent -->  
-  `;  
-}  
+  /**  
+  * Creates HTML for IP details.  
+  * @param {Object} ipData - IP details  
+  * @returns {string} HTML string  
+  */  
+  function createIpDetailsHtml(ipData) {  
+   if (!ipData) return '<p>Request failed</p>';  
   
-// Function to show IP details  
-async function showIpDetails() {  
-  // Get IP details element  
-  const ipDetails = document.getElementById('ip-details');  
+   return `  
+    <p><strong>ISP:</strong> ${ipData.org || ipData.isp || '-'}</p>  
+    <p><strong>IP Address:</strong> ${ipData.query || ipData.ip || '-'}</p>  
+    <p><strong>Country:</strong> ${ipData.country_name || ipData.country || '-'}</p>  
+    <p><strong>Timezone:</strong> ${ipData.timezone || '-'}</p>  
+    <p><strong>Region:</strong> ${ipData.regionName || ipData.region || '-'}</p>  
+    <p><strong>City:</strong> ${ipData.city || '-'}</p>  
+    <p><strong>Browser:</strong> ${navigator.userAgent}</p>  
+   `;  
+  }  
   
-  // Fetch IP details  
-  const ipData = await fetchIpDetails();  
-  
-  // Create HTML string for IP details  
-  const html = createIpDetailsHtml(ipData);  
-  
-  // Set IP details HTML  
-  ipDetails.innerHTML = html;  
-}  
-  
-// Add event listener to window load event  
-window.addEventListener('load', showIpDetails);
-
-
+  // Initialize on window load  
+  window.addEventListener('load', async () => {  
+   const ipDetailsContainer = document.getElementById('ip-details');  
+   const ipData = await getIpDetails();  
+   ipDetailsContainer.innerHTML = ipData ? createIpDetailsHtml(ipData) : '<p>Request failed</p>';  
+  });  
 </script>

@@ -1,179 +1,91 @@
-/* Reset some default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  word-wrap: break-word;
-}
+/* Global Styles */  
+  
+* {  
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box;  
+  word-wrap: break-word;  
+}  
+  
+/* Body Styles */  
+  
+body {  
+  display: grid;  
+  grid-template-rows: 100px 80px 1fr 100px 100px;  
+  grid-template-columns: 1fr 200px 600px 200px 1fr;  
+  min-height: 100vh;  
+  max-width: 1600px;  
+  margin: 0 auto;  
+  background-color: #616161;  
+  //grid-gap: 10px; /* Add grid gap */  
+}  
 
-/* Body styles */
-body {
-  background-color: #6C6C6C  ;
-  color: #000000;
-  font-family: 'Consolas', monospace;
+  
+/* Header and Nav Bar Styles */  
+  
+header {  
+  grid-row: 2;  
+  grid-column: 3;  
+  color: #444444;  
+  padding: 10px;  
+  background-color: #959595;  
+  text-align: center;  
+}  
+  
+nav {  
+  grid-row: 2;  
+  grid-column: 3;  
+  color: #444444;  
+  padding: 10px;  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+}  
+  
+nav ul {  
+  list-style: none;  
+  margin: 0;  
+  padding: 0;  
+  display: flex;  
+}  
+  
+nav ul li {  
+  margin-right: 20px;  
+}  
+  
+nav ul li:last-child {  
+  margin-right: 0;  
+}  
+  
+nav a {  
+  text-decoration: none;  
+  color: #444444;  
+  transition: color 0.2s ease;  
+}  
+  
+nav a:hover {  
+  color: #000;  
+}  
+  
+/* Container Styles */  
+  
+.container {  
+  grid-row: 3;  
+  grid-column: 3;  
+  background-color: #959595;  
+  color: #000000;  
+  padding: 40px 20px;  
+  display: flex;  
+  flex-direction: column;  
+  gap: 20px;  
+}  
+  
+/* Footer Styles */  
+footer {  
+  grid-row: 4;  
+  grid-column: 3;  
+  color: #444444;  
+  padding: 10px;  
   text-align: center;
-  padding: 50px 200px 500px; /* Top Right Bottom Left */
+  background-color: #959595;    
 }
-
-/* Change the title color */
-h3 {
-  color: #352879; /* Set title color */
-}
-
-/* Banner styles */
-header {
-  width: 90%; /* Set a relative width for the header */
-  max-width: 1000px; /* Set a maximum width to prevent excessive expansion */
-  margin: 0 auto; /* Center the header horizontally */
-  background-color: #959595;
-  color: #444444 ;
-}
-
-/* Navigation Bar styles */
-.navbar {
-  text-align: center;
-  color: #444444  ;
-  padding: 10px; /* Add padding to the navbar */
-}
-.navbar ul {
-  list-style-type: none;
-}
-
-.navbar ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-/* Main Content Container styles */
-.content-container {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Distribute space between columns */
-}
-
-.center-column {
-  width: 80%; /* Set a relative width for the center column */
-  max-width: 800px; /* Set a maximum width to prevent excessive expansion */
-  margin: 0 auto; /* Center the column horizontally */
-  text-align: left;
-  padding: 20px;
-  background-color: #959595;
-}
-
-/* Container styles */
-.container {
-  width: 90%; /* Set a relative width for the container */
-  max-width: 1000px; /* Set a maximum width to prevent excessive expansion */
-  margin: 0 auto; /* Center the container horizontally */
-  display: flex;
-  flex-direction: column;
-  background-color: #959595;
-  color: #000000 ;
-  padding: 20px;
-}
-
-/* For paragraphs within the container */
-body .container p {
-  text-align: left; /* Align paragraphs to the left */
-  margin-bottom: 15px; /* Add some space between paragraphs */
-}
-
-/* For lists within the container */
-body .container ul,
-body .container ol {
-  text-align: left; /* Align lists to the left */
-  padding-left: 20px; /* Add some left padding for better readability */
-}
-
-/* Footer styles */
-footer {
-  margin-top: 40px;
-  background-color: #959595 ;
-}
-
-body .container .post-image-big {
-  max-width: 100%;
-  height: auto;
-}
-
-body .container .post-image-small {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Navbar centerd with logo */
-ul.navbar-nav.me-auto {
-  padding-left: 20px;
-}
-
-/*Bootleg Code Block*/
-pre {
-  background-color:#FFFFFF ;
-  display: block;
-  font-family: monospace;
-  white-space: pre-wrap;
-}
-/*Table Style*/
-.table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.table td, .table th {
-  border: 1px solid black;
-  padding: 8px;
-}
-
-/* Link colors */
-a:link {
-  color:#6C5EB5 
-}
-a:visited {
-  color: #6F3D86;
-}
-@media (min-width: 768px) {
-  body .container .project-image {
-    width: 200px; /* Set the width to your desired size for larger screens */
-    height: 80px; /* Set the height to your desired size for larger screens */
-  }
-}
-  /* Media query for tablets */
-@media (max-width: 768px) {
-  body {
-    padding: 50px 100px; /* Top Right Bottom Left */
-  }
-
-  .container {
-    padding: 10px;
-  }
-
-  .content-container {
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  body .container .project-image {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-
-
-
-/* COLOR PALLET 
-1. Black: #000000
-2. White: #FFFFFF
-3. Red: #68372B
-4. Cyan: #70A4B2
-5. Violet/Purple: #6F3D86
-6. Green: #588D43
-7. Blue: #352879
-8. Yellow: #B8C76F
-9. Orange: #6F4F25
-10. Brown: #433900
-11. Light Red: #9A6759
-12. Dark Grey/Grey 1: #444444
-13. Grey 2: #6C6C6C
-14. Light Green: #9AD284
-15. Light Blue: #6C5EB5
-16. Light Grey/Grey 3: #959595
-*/
