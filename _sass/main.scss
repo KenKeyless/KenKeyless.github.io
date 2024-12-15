@@ -12,7 +12,7 @@
 body {  
   display: grid;  
   grid-template-rows: 100px 80px 1fr 100px 100px;  
-  grid-template-columns: repeat(5, 1fr); /* Use repeat() function to create 5 equal columns */  
+  grid-template-columns: repeat(4, 1fr); /* Use repeat() function to create 5 equal columns */  
   min-height: 100vh;  
    
   margin: 0 auto;  
@@ -24,14 +24,13 @@ body {
   
 header {  
   grid-row: 2;  
-  grid-column: 2 / 4; /* Span across all 5 columns */  
+  grid-column: 2 / 4; 
   color: #444444;  
   padding: 10px;  
   display: flex;  
   background-color: #959595;  
   text-align: center;
-  min-width: 300px; /* Set minimum width */ 
-  
+  min-width: 300px; 
 }
   
 nav {  
@@ -73,26 +72,26 @@ nav a:hover {
   
 .container {  
   grid-row: 3;  
-  grid-column: 2 / 4; /* Span across 2 columns */  
+  grid-column: 2 / 4;   
   background-color: #959595;  
   color: #000000;  
   padding: 40px 20px;  
   display: flex;  
   flex-direction: column; 
   gap: 20px;  
-  min-width: 300px; /* Set minimum width */  
+  min-width: 300px; 
 }  
   
   
 /* Footer Styles */  
 footer {  
   grid-row: 4;  
-  grid-column: 2 / 4; /* Span across 2 columns */  
+  grid-column: 2 / 4; 
   color: #444444;  
   padding: 10px;  
   text-align: center;  
   background-color: #959595;   
-  display: flex;  
- 
+  display: flex; 
+  min-width: 0;//needs to be set
 }
 
