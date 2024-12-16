@@ -1,59 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">
-    <a class="navbar-brand p-0">
-    <img src="{{ site.avatar | relative_url }}" alt="dark avatar" width="30" class="d-inline-block align-top m-0 avatar">
-    <span id="site-name">{{ site.name }}</span>
-  </a>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
-        {% for item in site.data.navigation %}
-          <li class="nav-item">
-            <a href="{{ item.link | relative_url }}" {% if page.url == item.link %} class="nav-link active" {% else %} class="nav-link" {% endif %}>{{ item.name }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</nav>
-<script>
-  function matrixEffect() {
-      const siteNameElement = document.getElementById('site-name');
-      const originalText = siteNameElement.innerText;
+<header>  
+  <div class="site-header">  
+   <a class="site-avatar" href="{{ '/' | relative_url }}">  
+    <img src="{{ site.avatar | relative_url }}" alt="Site Avatar" width="30" class="d-inline-block align-top m-0 avatar">  
+    <span id="site-name">{{ site.name }}</span>  
+   </a>  
+  </div>  
+  <nav class="site-navigation">  
+   <ul>  
+    {% for item in site.data.navigation %}  
+       <a href="{{ item.link | relative_url }}" {% if page.url == item.link %} class="active" {% endif %}>{{ item.name }}</a>  
+    {% endfor %}  
+   </ul>  
+  </nav>  
+</header>
 
-      setInterval(() => {
-        let modifiedText = '';
-        for (const char of originalText) {
-            const randomNum = Math.random();
-            if (randomNum < 0.33) {
-                modifiedText += char.toUpperCase();
-            } else if (randomNum < 0.66) {
-                modifiedText += char.toLowerCase();
-            } else {
-                modifiedText += l33tReplace(char);
-            }
-        }
-        siteNameElement.innerText = modifiedText;
-    }, 666); // Change in milliseconds
-}
-
-  function l33tReplace(char) {
-      switch (char.toLowerCase()) {
-          case 'g':
-              return '6';
-          case 'a':
-              return '4';
-          case 't':
-              return '7';
-          case 'e':
-              return '3';
-          default:
-              return char;
-      }
-  }
-
-  matrixEffect();
-</script>
-
-
- 
