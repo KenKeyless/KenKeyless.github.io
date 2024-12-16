@@ -15,8 +15,7 @@ body {
   grid-template-columns: repeat(4, 1fr); /* Use repeat() function to create 4 equal columns */  
   min-height: 100vh;  
   margin: 0 auto;  
-  background-color:rgb(0, 0, 0)  
-
+background-color: #000000;
 
 }  
 
@@ -36,7 +35,6 @@ header .site-header{
 }
 header .site-navigation{
   padding: 20px;
-  background-color:rgb(0, 0, 0);  
 
 }
   
