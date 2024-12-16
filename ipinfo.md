@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /ipinfo/
 title: ""
+permalink: /ipinfo/
 ---
 <div id="ip-details" class="small-text">  
   <!-- IP details go here -->  

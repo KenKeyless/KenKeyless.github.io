@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /posts/
 title: ""
+permalink: /posts/
 ---
 
 ## HTB Academy

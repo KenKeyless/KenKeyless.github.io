@@ -1,9 +1,9 @@
 - name: Home
   link: /
+- name: Tools
+  link: /Tools/
 - name: Posts
   link: /posts/
-- name: About
-  link: /about/
-- name: IP Info
-  link: /ipinfo/
+- name: Work
+  link: /work/
  

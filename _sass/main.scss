@@ -15,7 +15,9 @@ body {
   grid-template-columns: repeat(4, 1fr); /* Use repeat() function to create 4 equal columns */  
   min-height: 100vh;  
   margin: 0 auto;  
-  background-color: #616161;  
+  background-color:rgb(0, 0, 0)  
+
+
 }  
 
 /* Header and Nav Bar Styles */  
@@ -23,18 +25,18 @@ body {
 header {  
   grid-row: 2;  
   grid-column: 2 / 4; 
-  color: #444444;  
+  color: #000000;  
   display: flex;
   flex-direction: column;  
   min-width: 300px; 
 }
 header .site-header{
   padding: 5px;
-  background-color: #959595;  
+  background-color: #ffffff;  
 }
 header .site-navigation{
   padding: 20px;
-  background-color:rgba(0, 0, 255, 0.062)  
+  background-color:rgb(0, 0, 0);  
 
 }
   
@@ -42,8 +44,8 @@ header .site-navigation{
   
 .container {  
   grid-row: 3;  
-  grid-column: 2 / 4;   
-  background-color: #959595;  
+  grid-column: 2 / 4;  
+  background-color:rgb(255, 255, 255);   
   color: #000000;  
   padding:20px;  
   display: flex;  
@@ -59,7 +61,7 @@ footer {
   color: #444444;  
   padding: 10px;  
   text-align: center;  
-  background-color: #959595;   
+  background-color: #ffffff;   
   display: flex; 
   
 }
