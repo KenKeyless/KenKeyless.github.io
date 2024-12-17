@@ -33,7 +33,7 @@ header .site-header{
   background-color: #ffffff;  
 }
 header .site-navigation{
-  padding: 20px;
+  padding-top: 10px;
 }
   
 /* Container Styles */  
@@ -51,11 +51,10 @@ header .site-navigation{
 /* Footer Styles */  
 
 footer {  
-  grid-row: 4;  
-  grid-column: -2 / 2; 
+  grid-row: 5;  
+  grid-column: -5 / 1; 
   color: #000000;  
-  padding: 10px;   
-  background-color: #ffffff;   
+  padding-left: 10px;      
   display: grid; 
 }
 
