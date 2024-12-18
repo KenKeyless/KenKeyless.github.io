@@ -1,5 +1,5 @@
+
 /* Global Styles */  
-  
 * {  
   margin: 0;  
   padding: 0;  
@@ -15,9 +15,8 @@ body {
   grid-template-columns: repeat(4, 1fr); /* Use repeat() function to create 4 equal columns */  
   min-height: 100vh;  
   margin: 0 auto;  
-  background-image:url("https://img.itch.zone/aW1nLzExMTg0OTAxLnBuZw==/315x250%23c/6PToml.png");
-  background-repeat: repeat;
-
+  background-color: #000000;
+  min-width: 600px;
 }  
 
 /* Header and Nav Bar Styles */  
@@ -25,13 +24,13 @@ body {
 header {  
   grid-row: 2;  
   grid-column: -2 / 2; 
-  color: #ffffff;  
+  color: #000000;  
   display: grid;
-  min-width: 300px; 
+  min-width: 400px; 
 }
 header .site-header{
   padding-top: 10px;
-  background-color: #000000;  
+  background-color: #ffffff;  
 }
 span#site-name{
   padding-left: 20px;
@@ -43,7 +42,7 @@ header .site-navigation{
 header .site-navigation ul{
   padding-left: 20px; 
 }
-header .site-navigation a {  
+  header .site-navigation a {  
   padding-right: 20px;  
 }
 /* Container Styles */  
@@ -51,20 +50,56 @@ header .site-navigation a {
 .container {  
   grid-row: 3;  
   grid-column: 2 / 4;  
-  background-color:rgb(0, 0, 0);   
-  color: #ffffff;  
+  background-color:rgb(255, 255, 255);   
+  color: #000000;  
   padding:20px;  
   display: grid;
-  min-width: 300px; 
-}  
+  min-width: 400px; 
+  overflow: hidden;  
+  
+  text-wrap: balance;  
+  line-break: auto;  
+}
     
 /* Footer Styles */  
 
 footer {  
   grid-row: 5;  
   grid-column: -5 / 1; 
-  color: #00000000;  
+  color: #000000;  
   padding-left: 10px;      
   display: grid; 
 }
 
+  
+/* Image Handling */  
+img {  
+  max-width: 100%;  
+  height: auto;  
+  margin: 0 auto;  
+  display: block;  
+}  
+.post-image-big, .post-image-small {  
+  max-width: 100%;  
+  height: auto;  
+  margin: 0 auto;  
+  display: block;  
+}  
+  
+/* Mobile-specific media queries */  
+  
+@media (max-width: 768px) {  
+  /* Adjust image sizing */  
+  .post-image-big, .post-image-small {  
+   max-width: 80%;  
+   height: auto;  
+   margin: 0 auto;  
+   display: block;  
+  }  
+  
+  /* Adjust text wrapping */  
+  p, span, li {  
+   font-size: 16px;  
+   line-height: 1.5;  
+  }  
+}
