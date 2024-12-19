@@ -54,9 +54,8 @@ header .site-navigation ul{
   color: #000000;  
   padding:20px;  
   display: grid;
-  min-width: 400px; 
+  min-width: 500px; 
   overflow: hidden;  
-  
   text-wrap: balance;  
   line-break: auto;  
 }
@@ -88,18 +87,10 @@ img {
   
 /* Mobile-specific media queries */  
   
-@media (max-width: 768px) {  
-  /* Adjust image sizing */  
-  .post-image-big, .post-image-small {  
-   max-width: 80%;  
-   height: auto;  
-   margin: 0 auto;  
-   display: block;  
-  }  
+
   
   /* Adjust text wrapping */  
   p, span, li {  
    font-size: 16px;  
    line-height: 1.5;  
   }  
-}
