@@ -91,17 +91,30 @@ p, span, li {
 
 /* Light Theme */  
 :root {  
-  --primary-color: #2E86AB; /* Main calls-to-action */  
-  --secondary-color: #666666; /* Secondary information */  
-  --accent-color: #22863A; /* Highlights and notifications */  
-  --background-color: #F6F8FA; /* Background color */  
-  --text-color: #24292F; /* Text color */  
-  --text-hover-color: #333333; /* Text hover color */  
-  --link-color: #2E86AB; /* Link color */  
-  --link-hover-color: #22863A; /* Link hover color */  
-  --border-color: #D1D5DA; /* Border color */  
-  --background-hover-color: #F3F4F6; /* Background hover color */  
+  --background-color: #f0f0f0;  
+  --text-color: #333333;  
+  --primary-color: #337ab7;  
+  --secondary-color: #666666;  
+  --link-color: #337ab7;  
+  --link-hover-color: #23527c;  
+  --border-color: #d0d0d0;  
+  --accent-color: #2ea44f;  
+  --background-hover-color: #e5e5e5;  
 }  
+/* Dark Theme */  
+@media (prefers-color-scheme: dark) {  
+  :root {  
+    --background-color: #1a1d23;  
+--text-color: #ffffff;  
+--primary-color: #66d9ef;  
+--secondary-color: #999999;  
+--link-color: #66d9ef;  
+--link-hover-color: #44a0e6;  
+--border-color: #3f454a;  
+--accent-color: #2ea44f;  
+--background-hover-color: #2f343a;
+ 
+  } }
   
 body {  
   background-color: var(--background-color);  
@@ -113,7 +126,7 @@ h1 {
 }  
   
 h2, h3, h4, h5, h6 {  
-  color: var(--secondary-color); /* Subheadings */  
+  color: var(--text-color); /* Subheadings */  
 }  
   
 a {  
@@ -126,7 +139,7 @@ a:hover {
 }  
   
 a:visited {  
-  color: #1A1D23; /* Visited links */  
+  color: #4F4F4F; /* Visited links */  
 }  
   
 button {  
@@ -166,86 +179,7 @@ button.secondary:hover {
   background-color: var(--primary-color); /* Notification hover */  
   border-color: var(--primary-color);  
 }
-
   
-/* Dark Theme */  
-@media (prefers-color-scheme: dark) {  
-  :root {  
-    --primary-color: #58A6FF; /* Main calls-to-action */  
-    --secondary-color: #959DA5; /* Secondary information */  
-    --accent-color: #34D058; /* Highlights and notifications */  
-    --background-color: #0D1117; /* Background color */  
-    --text-color: #C9D4F7; /* Text color */  
-    --text-hover-color: #4F4F4F; /* Text hover color */  
-    --link-color: #58A6FF; /* Link color */  
-    --link-hover-color: #34D058; /* Link hover color */  
-    --border-color: #30363D; /* Border color */  
-    --background-hover-color: #161B22; /* Background hover color */  
-  }  
+ 
     
-  body {  
-    background-color: var(--background-color);  
-    color: var(--text-color);  
-  }  
-    
-  h1 {  
-    color: var(--primary-color); /* Main headings */  
-  }  
-    
-  h2, h3, h4, h5, h6 {  
-    color: var(--secondary-color); /* Subheadings */  
-  }  
-    
-  a {  
-    color: var(--link-color); /* Links */  
-    text-decoration: none;  
-  }  
-    
-  a:hover {  
-    color: var(--link-hover-color); /* Link hover */  
-  }  
-    
-  a:visited {  
-    color: #4F4F4F; /* Visited links */  
-  }  
-    
-  button {  
-    background-color: var(--primary-color); /* Main buttons */  
-    color: #FFFFFF;  
-    border: 1px solid var(--border-color);  
-    padding: 10px 20px;  
-    font-size: 16px;  
-    cursor: pointer;  
-  }  
-    
-  button:hover {  
-    background-color: var(--accent-color); /* Button hover */  
-    border-color: var(--accent-color);  
-  }  
-    
-  button.secondary {  
-    background-color: var(--secondary-color); /* Secondary buttons */  
-    color: #FFFFFF;  
-    border: 1px solid var(--border-color);  
-  }  
-    
-  button.secondary:hover {  
-    background-color: var(--background-hover-color); /* Secondary button hover */  
-    border-color: var(--border-color);  
-  }  
-    
-  .notification {  
-    background-color: var(--accent-color); /* Notifications */  
-    color: #FFFFFF;  
-    padding: 10px 20px;  
-    border-radius: 5px;  
-    border: 1px solid var(--accent-color);  
-  }  
-    
-  .notification:hover {  
-    background-color: var(--primary-color); /* Notification hover */  
-    border-color: var(--primary-color);  
-  }
-}  
-  
-
+ 
