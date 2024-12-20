@@ -1,5 +1,29 @@
+:root {  
+  --background-color: #F7F8FA;  
+  --text-color: #292D31;  
+  --primary-color: #005CC5;  
+  --secondary-color: #6A737D;  
+  --link-color: #005CC5;  
+  --header-background-color: #F7F8FA;  
+  --container-background-color: #FFFFFF;  
+}  
+  
+@media (prefers-color-scheme: dark) {  
+  :root {  
+   --background-color: #24292E;  
+   --text-color: #959DA5;  
+   --primary-color: #79B8FF;  
+   --secondary-color: #959DA5;  
+   --link-color: #79B8FF;  
+   --header-background-color: #24292E;  
+   --container-background-color: #2F363D;  
+  }  
+}
+
+
+  
 /* Global Styles */  
-* {  
+body * {  
   margin: 0;  
   padding: 0;  
   box-sizing: border-box;  
@@ -9,46 +33,60 @@
 /* Body Styles */  
 body {  
   display: grid;  
-  grid-template-rows: 100px 100px 1fr 100px 100px;  
-  grid-template-columns: repeat(4, 1fr); /* Use repeat() function to create 4 equal columns */  
+  grid: 100px 100px 1fr 100px 100px / repeat(4, 1fr);  
   min-height: 100vh;  
   margin: 0 auto;  
-  background-color: #F7F7F7; /* GitHub theme background color */  
+  background-color: var(--background-color);  
   min-width: 600px;  
+}  
+  
+/* Text Color */  
+.text-color {  
+  color: var(--text-color);  
+}  
+  
+/* Link Color */  
+.link-color {  
+  color: var(--link-color);  
 }  
   
 /* Header and Nav Bar Styles */  
 header {  
   grid-row: 2;  
   grid-column: -2 / 2;  
-  color: #333333; /* GitHub theme text color */  
+  @extend .text-color;  
   display: grid;  
   min-width: 400px;  
 }  
-header .site-header{  
+  
+header .site-header {  
   padding-top: 10px;  
-  background-color: #FFFFFF; /* GitHub theme header background color */  
+  background-color: var(--header-background-color);  
 }  
-span#site-name{  
+  
+span#site-name {  
   padding-left: 20px;  
 }  
-header .site-navigation{  
+  
+header .site-navigation {  
   padding-top: 10px;  
 }  
-header .site-navigation ul{  
+  
+header .site-navigation ul {  
   padding-left: 20px;  
 }  
+  
 header .site-navigation a {  
   padding-right: 20px;  
-  color: #24292E; /* GitHub theme link color */  
+  @extend .link-color;  
 }  
   
 /* Container Styles */  
 .container {  
   grid-row: 3;  
   grid-column: 2 / 4;  
-  background-color: #FFFFFF; /* GitHub theme container background color */  
-  color: #333333; /* GitHub theme text color */  
+  background-color: var(--container-background-color);  
+  @extend .text-color;  
   padding: 20px;  
   display: grid;  
   min-width: 500px;  
@@ -61,125 +99,15 @@ header .site-navigation a {
 footer {  
   grid-row: 5;  
   grid-column: -5 / 1;  
-  color: #333333; /* GitHub theme text color */  
+  @extend .text-color;  
   padding-left: 10px;  
   display: grid;  
-}  
-  
+}
+
 /* Image Handling */  
-img {  
+.image {  
   max-width: 100%;  
   height: auto;  
   margin: 0 auto;  
   display: block;  
-}  
-.post-image-big, .post-image-small {  
-  max-width: 100%;  
-  height: auto;  
-  margin: 0 auto;  
-  display: block;  
-}  
-  
-/* Mobile-specific media queries */  
-/* Adjust text wrapping */  
-p, span, li {  
-  font-size: 16px;  
-  line-height: 1.5;  
 }
-
-
-
-/* Light Theme */  
-:root {  
-  --background-color: #f0f0f0;  
-  --text-color: #333333;  
-  --primary-color: #337ab7;  
-  --secondary-color: #666666;  
-  --link-color: #337ab7;  
-  --link-hover-color: #23527c;  
-  --border-color: #d0d0d0;  
-  --accent-color: #2ea44f;  
-  --background-hover-color: #e5e5e5;  
-}  
-/* Dark Theme */  
-@media (prefers-color-scheme: dark) {  
-  :root {  
-    --background-color: #1a1d23;  
---text-color: #ffffff;  
---primary-color: #66d9ef;  
---secondary-color: #999999;  
---link-color: #66d9ef;  
---link-hover-color: #44a0e6;  
---border-color: #3f454a;  
---accent-color: #2ea44f;  
---background-hover-color: #2f343a;
- 
-  } }
-  
-body {  
-  background-color: var(--background-color);  
-  color: var(--text-color);  
-}  
-  
-h1 {  
-  color: var(--primary-color); /* Main headings */  
-}  
-  
-h2, h3, h4, h5, h6 {  
-  color: var(--text-color); /* Subheadings */  
-}  
-  
-a {  
-  color: var(--link-color); /* Links */  
-  text-decoration: none;  
-}  
-  
-a:hover {  
-  color: var(--link-hover-color); /* Link hover */  
-}  
-  
-a:visited {  
-  color: #4F4F4F; /* Visited links */  
-}  
-  
-button {  
-  background-color: var(--primary-color); /* Main buttons */  
-  color: #FFFFFF;  
-  border: 1px solid var(--border-color);  
-  padding: 10px 20px;  
-  font-size: 16px;  
-  cursor: pointer;  
-}  
-  
-button:hover {  
-  background-color: var(--accent-color); /* Button hover */  
-  border-color: var(--accent-color);  
-}  
-  
-button.secondary {  
-  background-color: var(--secondary-color); /* Secondary buttons */  
-  color: #FFFFFF;  
-  border: 1px solid var(--border-color);  
-}  
-  
-button.secondary:hover {  
-  background-color: var(--background-hover-color); /* Secondary button hover */  
-  border-color: var(--border-color);  
-}  
-  
-.notification {  
-  background-color: var(--accent-color); /* Notifications */  
-  color: #FFFFFF;  
-  padding: 10px 20px;  
-  border-radius: 5px;  
-  border: 1px solid var(--accent-color);  
-}  
-  
-.notification:hover {  
-  background-color: var(--primary-color); /* Notification hover */  
-  border-color: var(--primary-color);  
-}
-  
- 
-    
- 

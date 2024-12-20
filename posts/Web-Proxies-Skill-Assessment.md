@@ -9,7 +9,7 @@ title: Web Proxies Skill Assessment
 **Setting Up BurpSuite:**
 Open BurpSuite and configure your browser to proxy through it. Ensure the intercept is enabled to capture and manipulate web traffic.
 
-<img class="post-image-small" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image4.png" alt="Image 4">
+<img class="image" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image4.png" alt="Image 4">
 
 **Navigate to /lucky.php:**
 Access the "/lucky.php" page and open the developer tools in your browser. Enable the button within the developer tools interface.
@@ -17,12 +17,12 @@ Access the "/lucky.php" page and open the developer tools in your browser. Enabl
 
 **Intercept the Request:**
 Click the enabled button and intercept the request using BurpSuite. The intercepted request should show "getflag=true".
-<img class="post-image-big" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image1.png" alt="Image 1">
+<img class="image" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image1.png" alt="Image 1">
 
 **Send to Repeater:**
 Transfer this intercepted request to the Repeater tool in BurpSuite. Begin sending the request repeatedly.
 
-<img class="post-image-big" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image10.png" alt="Image 10">
+<img class="image" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image10.png" alt="Image 10">
 
 **Exploring Race Conditions:**
 The server might exhibit a Race Condition or State Change behavior, where the flag only appears after sending the request multiple times. Observe any changes in the server's response or behavior of the button during this process.
@@ -30,7 +30,7 @@ The server might exhibit a Race Condition or State Change behavior, where the fl
 **Persistence Pays Off:**
 Keep sending the request through the Repeater tool until the flag eventually appears. This persistence and experimentation are crucial in identifying vulnerabilities reliant on timing or state changes.
 
-<img class="post-image-big" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image6.png" alt="Image 6">
+<img class="image" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image6.png" alt="Image 6">
 
 ---
 <br>
@@ -41,13 +41,13 @@ Keep sending the request through the Repeater tool until the flag eventually app
 **Intercept the Request:**
 Access the "/admin.php" page and intercept the login request to acquire the encoded cookie.
 
-<img class="post-image-small" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image8.png" alt="Image 8">
+<img class="image" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image8.png" alt="Image 8">
 
 
 **Decode the Cookie:**
 Upon inspecting the cookie, it seems to be initially encoded in hexadecimal format. However, decoding this reveals another 64-character string, indicating a closer alignment with Base64 encoding. Proceeding with both decoding methods—first hex decoding followed by Base64—unveils a string of 31 characters, meeting the criteria specified in the challenge.
 
-<img class="post-image-big" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image3.png" alt="Image 3">
+<img class="image" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image3.png" alt="Image 3">
 
 ---
 <br>
@@ -58,7 +58,7 @@ Upon inspecting the cookie, it seems to be initially encoded in hexadecimal form
 **Sending the Initial Request:**
 Using BurpSuite, forward the initial request to the Intruder, ensuring to isolate and parameterize only the cookie for modification.
 
-<img class="post-image-big" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image2.png" alt="Image 2">
+<img class="image" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image2.png" alt="Image 2">
 
 **Setting Up Payload Processing:**
 Navigate to the "Payloads" tab within the Intruder tool. Under "Payload Processing" add the following modifications:
@@ -72,7 +72,7 @@ Apply ASCII Hex encoding
 
 **Including the Alphanumeric Wordlist:**
 In the "Payload Options," incorporate the "alphanum-case.txt" wordlist from Seclist and start the attack.
-<img class="post-image-big" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image7.png" alt="Image 7">
+<img class="image" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image7.png" alt="Image 7">
 
 **Observing Length Changes:**
 Monitor the attack progress within BurpSuite. Note any variations or patterns in the lengths of the responses.
@@ -80,7 +80,7 @@ Monitor the attack progress within BurpSuite. Note any variations or patterns in
 **Inspecting Response Headers:**
 Click on the modified requests generated by the attack within BurpSuite. Explore the response of these requests to identify the flag.
 
-<img class="post-image-big" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image5.png" alt="Image 5">
+<img class="image" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image5.png" alt="Image 5">
 
 **Mitigation Strategy: "Limited Cookie Lifespan"** Set appropriate expiration times for cookies, ensuring they expire after a reasonable duration to reduce the window of vulnerability.
 
@@ -94,7 +94,7 @@ Click on the modified requests generated by the attack within BurpSuite. Explore
 
 **Search for the Module:** Open the Metasploit Framework console. Search for the 'coldfusion_locale_traversal' module using the `search` command.
 
-<img class="post-image-big" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image9.png" alt="Image 9">
+<img class="image" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image9.png" alt="Image 9">
 
 **Set Module Options:** Upon locating the module, set the required options:
 
@@ -108,6 +108,6 @@ Configure proxies to direct traffic through Burp Suite (`Proxies`).
 
 **Intercept Requests with Burp Suite:** As the attack runs, the requests will be routed through your defined proxy settings (`HTTP:127.0.0.1:8080`). Burp Suite will intercept the requests, allowing inspection.
 
-<img class="post-image-big" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image11.png" alt="Image 11">
+<img class="image" src="{{site.baseurl}}\assets\images\Web-Proxies-Skill-Assessment_images\images\image11.png" alt="Image 11">
 
 **Mitigation Strategy: "Patch and Update ColdFusion"** Address specific vulnerabilities like [CVE-2010-2861](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2861) by promptly updating ColdFusion to the latest available version. Regular updates are crucial to mitigate known vulnerabilities.
