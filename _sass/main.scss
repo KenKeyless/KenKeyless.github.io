@@ -37,7 +37,7 @@ body {
   min-height: 100vh;  
   margin: 0 auto;  
   background-color: var(--background-color);  
-  min-width: 600px;  
+  min-width: 650px;  
 }  
   
 /* Text Color */  
@@ -89,7 +89,7 @@ header .site-navigation a {
   @extend .text-color;  
   padding: 20px;
   display: grid;  
-  min-width: 500px;  
+  min-width: 600px;  
   overflow: hidden;  
   text-wrap: balance;  
   line-break: auto;  
