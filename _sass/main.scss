@@ -27,7 +27,7 @@ body * {
   margin: 0;  
   padding: 0;  
   box-sizing: border-box;  
-  word-wrap: break-word;  
+  word-wrap: normal;  
 }  
   
 /* Body Styles */  
@@ -87,7 +87,7 @@ header .site-navigation a {
   grid-column: 2 / 4;  
   background-color: var(--container-background-color);  
   @extend .text-color;  
-  padding: 20px;  
+  padding: 20px;
   display: grid;  
   min-width: 500px;  
   overflow: hidden;  
