@@ -2,6 +2,7 @@
 layout: default
 permalink:
 ---
-<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2g2ajdqbWFidXp3ZjMwZnMzaXhieW04dXVyN3I5MzEzbmcycGR6YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2JhnjGtRdRJP0Ooo/giphy.webp" alt="temp" style="display: block; margin: 0 auto; width: 100%;">
+<img src="https://i.pinimg.com/originals/93/25/46/9325464b8b44903965714e67313dd6ad.gif" alt="temp" style="display: block; margin: 0 auto; width: 100%;">
+<br>
 
 
