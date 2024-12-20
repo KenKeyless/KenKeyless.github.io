@@ -97,8 +97,8 @@ header .site-navigation a {
   
 /* Footer Styles */  
 footer {  
-  grid-row: 5;  
-  grid-column: -5 / 1;  
+  grid-row:5;  
+  grid-column: -5/ 5; 
   @extend .text-color;  
   padding-left: 10px;  
   display: grid;  
