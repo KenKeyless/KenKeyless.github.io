@@ -33,12 +33,13 @@ body * {
 /* Body Styles */  
 body {  
   display: grid;  
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto ;  
+  grid-template-columns: 1fr 3fr 1fr;  
+  grid-template-rows: auto auto auto;  
+  grid-gap: 10px; 
   margin: 0 auto;  
   background-color: var(--background-color);  
-  min-width: 100vw;
-}
+  min-width: 100vw;  
+}  
   
 /* Text Color */  
 .text-color {  
@@ -52,7 +53,7 @@ body {
   
 /* Header and Nav Bar Styles */  
 header {  
-  grid-row:2;  
+  grid-row: 1; 
   grid-column: 2;  
   color: var(--text-color);  
   display: grid;  
@@ -84,26 +85,21 @@ header .site-navigation a {
   
 /* Container Styles */  
 .container {  
-  grid-row: 3;  
+  grid-row: 2; 
   grid-column: 2;  
   background-color: var(--container-background-color);  
   color: var(--text-color);  
   padding: 20px;  
   display: grid;  
-  min-width: calc(50vw );
-  margin: 0 auto;  
-  overflow: hidden;  
-  text-wrap: balance;  
-  line-break: auto;  
 }  
   
 /* Footer Styles */  
 footer {  
-  grid-row: 4;  
+  grid-row: 3;   
   grid-column: 2;  
   color: var(--text-color);  
   display: grid;  
-}  
+}
   
 /* Image Handling */  
 .image {  
