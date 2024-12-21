@@ -33,12 +33,12 @@ body * {
 /* Body Styles */  
 body {  
   display: grid;  
-  grid: 100px 100px 1fr 100px 100px / repeat(4, 1fr);  
-  min-height: 100vh;  
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px 1fr 100px 100px;  
   margin: 0 auto;  
   background-color: var(--background-color);  
-  min-width: 650px;  
-}  
+  min-width: 100vw;
+}
   
 /* Text Color */  
 .text-color {  
@@ -52,11 +52,10 @@ body {
   
 /* Header and Nav Bar Styles */  
 header {  
-  grid-row: 2;  
-  grid-column: -2 / 2;  
-  @extend .text-color;  
+  grid-row:2;  
+  grid-column: 2;  
+  color: var(--text-color);  
   display: grid;  
-  min-width: 400px;  
 }  
   
 header .site-header {  
@@ -74,22 +73,25 @@ header .site-navigation {
   
 header .site-navigation ul {  
   padding-left: 20px;  
+  list-style: none;  
 }  
   
 header .site-navigation a {  
   padding-right: 20px;  
-  @extend .link-color;  
+  color: var(--link-color);  
+  text-decoration: none;  
 }  
   
 /* Container Styles */  
 .container {  
   grid-row: 3;  
-  grid-column: 2 / 4;  
+  grid-column: 2;  
   background-color: var(--container-background-color);  
-  @extend .text-color;  
-  padding: 20px;
+  color: var(--text-color);  
+  padding: 20px;  
   display: grid;  
-  min-width: 600px;  
+  min-width: calc(50vw );
+  margin: 0 auto;  
   overflow: hidden;  
   text-wrap: balance;  
   line-break: auto;  
@@ -97,17 +99,18 @@ header .site-navigation a {
   
 /* Footer Styles */  
 footer {  
-  grid-row:5;  
-  grid-column: -5/ 5; 
-  @extend .text-color;  
-  padding-left: 10px;  
+  grid-row: 4;  
+  grid-column: 2;  
+  color: var(--text-color);  
   display: grid;  
-}
-
+}  
+  
 /* Image Handling */  
 .image {  
   max-width: 100%;  
   height: auto;  
+  object-fit: cover;  
   margin: 0 auto;  
   display: block;  
-}
+}  
+  
