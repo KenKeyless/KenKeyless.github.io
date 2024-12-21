@@ -1,8 +1,8 @@
 
-- name: Tools
+- name: /tools
   link: /tools/
-- name: Posts
+- name: /posts
   link: /posts/
-- name: Work
+- name: /work
   link: /work/
  

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us" class="h-100">
   <head>
-    <title>
-      {% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{
-      site.description }}
-    </title>
+    <title>  
+      <!-- {% if page.title %}{{ page.title }} – {% endif %} -->  
+      {{ site.name }} – {{ site.description }}  
+    </title>    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -18,11 +18,9 @@
     {% include navigation.html %}
   </header>
     <div class="container">
-      <div class="content-container">
-            <div class="center-column">{{ content }}
-            </div>
-          </div> 
-        </div>  
+      <div class="content-container">{{ content }}
+      </div> 
+    </div>  
         <footer>
             {% include footer.html %}
       </footer>       
