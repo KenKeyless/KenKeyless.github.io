@@ -1,7 +1,7 @@
 ---
-layout: page
-title: ""
-permalink: /tools/
+layout: page  
+title: "Tools and Resources"  
+permalink: /tools/ 
 ---
 ## [Command Injection Payload List](https://github.com/payloadbox/command-injection-payload-list){:target="_blank"}
 <br>
@@ -33,7 +33,7 @@ permalink: /tools/
 ## [Nmap Cheat Sheet](https://highon.coffee/blog/nmap-cheat-sheet/){:target="_blank"}
 <br>
 
-## [OWASP Top 10](/OWASP-Top-Ten/)
+## [OWASP Top 10](https://owasp.org/www-project-top-ten/){:target="_blank"}
 <br>
 
 ## [PHP Reverse Shell](https://pentestmonkey.net/tag/php){:target="_blank"}
@@ -51,10 +51,13 @@ permalink: /tools/
 ## [Shodan](https://www.shodan.io/){:target="_blank"}
 <br> 
 
-## [Top 50 Ports](/Port-List/)
+## [Top 50 Ports](https://www.speedguide.net/ports.php/){:target="_blank"}
 <br>
 
 ## [Updog(HTTPServer)](https://github.com/sc0tfree/updog){:target="_blank"}
 
 
+
+ 
+  
 
